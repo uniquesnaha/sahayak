@@ -1,3 +1,4 @@
 /.env
 /.venv
 /ui/node_modules
+/google_firestore.json
