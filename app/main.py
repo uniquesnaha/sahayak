@@ -5,16 +5,35 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
+import logging
+from logging.handlers import RotatingFileHandler
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from app.routers.agents import router as agents_router
+
+# ——— Logging setup —————————————————————————————————————————
+# You can override LOG_FILE_PATH in your .env if you like.
+log_path = os.getenv("LOG_FILE_PATH", "app.log")
+
+handler = RotatingFileHandler(
+    filename=log_path,
+    maxBytes=5 * 1024 * 1024,   # rotate after 5 MB
+    backupCount=3,              # keep last 3 files
+    encoding="utf-8"
+)
+handler.setFormatter(logging.Formatter(
+    "%(asctime)s %(levelname)s %(name)s: %(message)s"
+))
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.DEBUG)
+root_logger.addHandler(handler)
+# ——————————————————————————————————————————————————————————
 
 app = FastAPI(title="Sahayak AskSahayak Feature")
 
 # 2. CORS setup (origins from env or wildcard)
 origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
