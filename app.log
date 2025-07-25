@@ -103,3 +103,24 @@ Functions:
 2025-07-25 14:20:59,241 DEBUG httpcore.connection: close.complete
 2025-07-25 14:45:00,672 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
 2025-07-25 14:45:04,344 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-25 14:49:06,380 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-25 14:49:06,663 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-25 14:49:06,663 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-25 14:49:06,731 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BCDB6E3320>
+2025-07-25 14:49:06,731 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000001BCDB147AD0> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-25 14:49:06,781 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BCDB6D0E60>
+2025-07-25 14:49:06,781 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-25 14:49:06,781 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-25 14:49:06,781 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-25 14:49:06,781 DEBUG httpcore.http11: send_request_body.complete
+2025-07-25 14:49:06,781 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-25 14:49:15,065 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Fri, 25 Jul 2025 09:19:15 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-25 14:49:15,065 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/imagen-3.0-generate-002:predict "HTTP/1.1 200 OK"
+2025-07-25 14:49:15,065 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-25 14:49:17,181 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-25 14:49:17,181 DEBUG httpcore.http11: response_closed.started
+2025-07-25 14:49:17,181 DEBUG httpcore.http11: response_closed.complete
+2025-07-25 14:49:17,246 DEBUG urllib3.util.retry: Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-07-25 14:49:17,263 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-25 14:49:17,480 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-25 14:49:17,480 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): storage.googleapis.com:443
