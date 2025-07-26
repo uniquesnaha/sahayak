@@ -5499,3 +5499,217 @@ Raw response:
 2025-07-26 17:20:55,160 DEBUG httpcore.connection: close.started
 2025-07-26 17:20:55,176 DEBUG httpcore.connection: close.complete
 2025-07-26 19:00:12,742 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line diagram of: Create a diagram of water cycle
+2025-07-26 19:03:50,712 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line diagram of: Create a diagram of water cycle
+2025-07-26 19:10:31,999 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line diagram of: Create a diagram of food chain
+2025-07-26 19:11:28,981 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line diagram of: Create a diagram of large branches of food chain
+2025-07-26 19:22:27,337 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 elementary science teacher, 
+2025-07-26 19:23:57,456 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line diagram of: Create a diagram of large branches of food chain
+2025-07-26 19:25:18,371 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a sketch diagram of: Create a diagram of large branches of food chain
+2025-07-26 19:43:57,560 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 5 students based on the given context by the grade 5 teacher: Create a diagram of large branches of food chain. If the teacher's input(diagram type) is line type, then generate the line diagram that is easier to draw on chalkboard 
+2025-07-26 19:45:04,598 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 7 students based on the given context by the grade 7 teacher: Create a diagram of large branches of food chain. If the teacher's input(diagram type) is line type, then generate the line diagram that is easier to draw on chalkboard 
+2025-07-26 19:46:26,313 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 7 students based on the given context by the grade 7 teacher: Create a diagram of water cycle. If the teacher's input(diagram type) is line type, then generate the line diagram that is easier to draw on chalkboard 
+2025-07-26 19:47:55,131 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 5 students based on the given context by the grade 5 teacher: Create a diagram of water cycle. If the teacher's input(diagram type) is line type, then generate the line diagram that is easier to draw on chalkboard 
+2025-07-26 19:48:17,677 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 3 students based on the given context by the grade 3 teacher: Create a diagram of water cycle. If the teacher's input(diagram type) is line type, then generate the line diagram that is easier to draw on chalkboard 
+2025-07-26 20:26:19,813 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 3 students based on the given context by the grade 3 teacher: Create a diagram of water cycle. If the teacher's input(diagram type) is line type, then generate the line diagram that is easier to draw on chalkboard.Also I need the diagrams based on correct grade levels and topic. And i also need the diagram with Chalkboard background.
+2025-07-26 20:49:30,740 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 3 students based on the given context by the grade 3 teacher: Create a diagram of water cycle. If the diagram is line type, then generate the line diagram that is easier to draw for teacher on a chalkboard.Also I need the diagrams based on correct grade levels and topic.Please make sure the words are correct too!
+2025-07-26 20:50:07,854 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 5 students based on the given context by the grade 5 teacher: Create a diagram of water cycle. If the diagram is line type, then generate the line diagram that is easier to draw for teacher on a chalkboard.Also I need the diagrams based on correct grade levels and topic.Please make sure the words are correct too!
+2025-07-26 20:51:33,221 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 5 students based on the given context by the grade 5 teacher: Create a diagram of water cycle. If the diagram is line type, then generate the line diagram that is easier to draw for teacher on a chalkboard.Also I need the diagram based on correct grade levels and topic.Please make sure the words are correct too!
+2025-07-26 20:52:54,516 DEBUG app.agents.diagram_generator: Enriched prompt: Generate a sketch diagram for grade 5 students based on the given context by the grade 5 teacher: Create a diagram of water cycle. If the diagram is line type, then generate the line diagram that is easier to draw for teacher on a chalkboard.Also I need the diagram based on correct grade levels and topic.
+2025-07-26 20:58:48,174 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a sketch diagram of: Create a diagram of water cycle
+2025-07-26 20:59:41,336 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 7 teacher, draw a sketch diagram of: Create a diagram of the water cycle
+2025-07-26 21:01:46,411 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the food chain
+2025-07-26 21:03:24,861 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the complex food chain
+2025-07-26 22:27:54,464 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the complex food chain
+2025-07-26 22:35:45,733 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the complex food chain
+2025-07-26 22:37:49,437 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the Water cycle
+2025-07-26 22:49:42,190 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the Water cycle
+2025-07-26 22:50:41,524 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 10 teacher, draw a sketch diagram of: Create a diagram of the Water cycle
+2025-07-26 23:30:48,843 DEBUG app.agents.mindmap_generator: 🧠 Mindmap prompt: As a Grade 6 science teacher, generate PlantUML code for a mind map diagram based on the topic: water cycle. Use rectangular or cloud-style nodes suitable for kids. Only return valid PlantUML code. Do not include markdown or explanations.
+2025-07-26 23:35:40,850 DEBUG app.agents.mindmap_generator: 🧠 Mindmap prompt: As a Grade 7 Science teacher, generate PlantUML code for a mind map diagram based on the topic: Water cycle. Use rectangular or cloud-style nodes suitable for kids. Only return valid PlantUML code. Do not include markdown or explanations.
+2025-07-26 23:58:22,798 DEBUG app.agents.mindmap_generator: 🧠 Mindmap prompt: As a Grade 7 Science teacher, generate PlantUML code for a mind map diagram based on the topic: Water cycle. Use rectangular or cloud-style nodes suitable for kids. Only return valid PlantUML code. Do not include markdown or explanations.
+2025-07-26 23:58:59,066 DEBUG app.agents.mindmap_generator: ✅ Cleaned PlantUML code:
+@startmindmap
+skinparam mindmap {
+BackgroundColor transparent
+LineColor #555555
+RoundCorner 20
+Shadowing 2
+Node {
+Padding 15
+Margin 10
+}
+}
+* **The Water Cycle** [#87CEEB]
+right side
+** Evaporation [#FFDEAD]
+*** Heat from the Sun turns liquid water into gas (water vapor).
+*** Water vapor rises into the atmosphere.
+***_ **Transpiration:** Evaporation from plant leaves.
+** Condensation [#E0E0E0] is a cloud
+*** Water vapor in the air cools down.
+*** It changes back into liquid water droplets.
+*** Droplets group together to form **clouds**.
+left side
+** Precipitation [#ADD8E6]
+*** When clouds get too heavy, water falls back to Earth.
+*** This can be in the form of:
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+** Collection [#B0E0E6]
+*** Water gathers in large bodies like oceans, lakes, and rivers.
+*** **Runoff**
+**** Water flows over the land's surface.
+*** **Infiltration**
+**** Water soaks into the ground and becomes groundwater.
+@endmindmap
+2025-07-27 00:08:56,155 DEBUG app.agents.mindmap_generator: 🧠 Mindmap prompt: As a Grade 7 Science teacher, generate PlantUML code for a mind map diagram based on the topic: Water cycle. Use rectangular or cloud-style nodes. Only return valid PlantUML code. Do not include markdown or explanations.
+2025-07-27 00:09:17,138 DEBUG app.agents.mindmap_generator: 🪵 Raw Gemini response:
+"@startmindmap\n<style>\nmindmapDiagram {\n  node {\n    Shape cloud\n    BackgroundColor lightblue\n    LineColor blue\n  }\n  arrow {\n    LineColor #666666\n  }\n}\n</style>\n\n* The Water Cycle\n** Evaporation\n*** The Sun's heat provides energy\n*** Liquid water turns into a gas (water vapor)\n*** Water evaporates from oceans, lakes, and rivers\n*** Transpiration: Water vapor released from plants\n\n** Condensation\n*** Water vapor cools down in the atmosphere\n*** Gas turns back into tiny liquid water droplets\n*** Clouds are formed\n\n** Precipitation\n*** Water falls back to Earth from clouds\n*** Happens when clouds get too heavy\n*** Forms of Precipitation:\n**** Rain\n**** Snow\n**** Sleet\n**** Hail\n\n** Collection\n*** Water gathers on the Earth's surface\n*** Accumulation: Water stored in oceans, lakes, and glaciers\n*** Runoff: Water flows over the land into rivers\n*** Infiltration: Water soaks into the ground to become groundwater\n\n@endmindmap"
+2025-07-27 00:09:17,138 DEBUG app.agents.mindmap_generator: ⚙️ Raw before cleaning:
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    Shape cloud
+    BackgroundColor lightblue
+    LineColor blue
+  }
+  arrow {
+    LineColor #666666
+  }
+}
+</style>
+
+* The Water Cycle
+** Evaporation
+*** The Sun's heat provides energy
+*** Liquid water turns into a gas (water vapor)
+*** Water evaporates from oceans, lakes, and rivers
+*** Transpiration: Water vapor released from plants
+
+** Condensation
+*** Water vapor cools down in the atmosphere
+*** Gas turns back into tiny liquid water droplets
+*** Clouds are formed
+
+** Precipitation
+*** Water falls back to Earth from clouds
+*** Happens when clouds get too heavy
+*** Forms of Precipitation:
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+
+** Collection
+*** Water gathers on the Earth's surface
+*** Accumulation: Water stored in oceans, lakes, and glaciers
+*** Runoff: Water flows over the land into rivers
+*** Infiltration: Water soaks into the ground to become groundwater
+
+@endmindmap
+2025-07-27 00:09:17,138 DEBUG app.agents.mindmap_generator: ✅ Cleaned PlantUML code:
+@startmindmap
+<style>
+mindmapDiagram {
+node {
+Shape cloud
+BackgroundColor lightblue
+LineColor blue
+}
+arrow {
+LineColor #666666
+}
+}
+</style>
+* The Water Cycle
+** Evaporation
+*** The Sun's heat provides energy
+*** Liquid water turns into a gas (water vapor)
+*** Water evaporates from oceans, lakes, and rivers
+*** Transpiration: Water vapor released from plants
+** Condensation
+*** Water vapor cools down in the atmosphere
+*** Gas turns back into tiny liquid water droplets
+*** Clouds are formed
+** Precipitation
+*** Water falls back to Earth from clouds
+*** Happens when clouds get too heavy
+*** Forms of Precipitation:
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+** Collection
+*** Water gathers on the Earth's surface
+*** Accumulation: Water stored in oceans, lakes, and glaciers
+*** Runoff: Water flows over the land into rivers
+*** Infiltration: Water soaks into the ground to become groundwater
+@endmindmap
+2025-07-27 00:12:10,240 DEBUG app.agents.mindmap_generator: 🧠 Mindmap prompt: As a Grade 7 Science teacher, generate PlantUML code for a mind map diagram based on the topic: Water cycle. Use rectangular or cloud-style nodes. Only return valid PlantUML code. Do not include markdown or explanations.
+2025-07-27 00:12:28,972 DEBUG app.agents.mindmap_generator: 🪵 Raw Gemini response:
+"@startmindmap\n!theme cerulean-outline\nskinparam mindmap {\n    BackgroundColor #FFFFFF\n}\n\n* <&cloud> **THE WATER CYCLE**\n**[#LightSkyBlue] Evaporation\n*** The sun's heat changes liquid water into a gas called water vapor.\n*** Occurs on the surface of oceans, lakes, and rivers.\n**[#LightGreen] Transpiration\n*** Plants release water vapor from their leaves.\n**[#Gainsboro] Condensation\n*** Water vapor in the air gets cold and changes back into liquid water.\n*** Forms clouds.\n**[#CornflowerBlue] Precipitation\n*** Water falls from clouds back to Earth.\n**** Rain\n**** Snow\n**** Sleet\n**** Hail\n**[#SaddleBrown] Collection\n*** Water gathers in different places.\n**** Oceans, Lakes, Rivers (Surface Water)\n**** Underground (Groundwater)\n**[#Tan] Runoff\n*** Water that flows over the land's surface into rivers and lakes.\n**[#BurlyWood] Infiltration\n*** Water soaks into the soil from the ground level.\n\n@endmindmap"
+2025-07-27 00:12:28,972 DEBUG app.agents.mindmap_generator: ⚙️ Raw before cleaning:
+@startmindmap
+!theme cerulean-outline
+skinparam mindmap {
+    BackgroundColor #FFFFFF
+}
+
+* <&cloud> **THE WATER CYCLE**
+**[#LightSkyBlue] Evaporation
+*** The sun's heat changes liquid water into a gas called water vapor.
+*** Occurs on the surface of oceans, lakes, and rivers.
+**[#LightGreen] Transpiration
+*** Plants release water vapor from their leaves.
+**[#Gainsboro] Condensation
+*** Water vapor in the air gets cold and changes back into liquid water.
+*** Forms clouds.
+**[#CornflowerBlue] Precipitation
+*** Water falls from clouds back to Earth.
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+**[#SaddleBrown] Collection
+*** Water gathers in different places.
+**** Oceans, Lakes, Rivers (Surface Water)
+**** Underground (Groundwater)
+**[#Tan] Runoff
+*** Water that flows over the land's surface into rivers and lakes.
+**[#BurlyWood] Infiltration
+*** Water soaks into the soil from the ground level.
+
+@endmindmap
+2025-07-27 00:12:28,972 DEBUG app.agents.mindmap_generator: ✅ Cleaned PlantUML code:
+@startmindmap
+!theme cerulean-outline
+skinparam mindmap {
+BackgroundColor #FFFFFF
+}
+* <&cloud> **THE WATER CYCLE**
+**[#LightSkyBlue] Evaporation
+*** The sun's heat changes liquid water into a gas called water vapor.
+*** Occurs on the surface of oceans, lakes, and rivers.
+**[#LightGreen] Transpiration
+*** Plants release water vapor from their leaves.
+**[#Gainsboro] Condensation
+*** Water vapor in the air gets cold and changes back into liquid water.
+*** Forms clouds.
+**[#CornflowerBlue] Precipitation
+*** Water falls from clouds back to Earth.
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+**[#SaddleBrown] Collection
+*** Water gathers in different places.
+**** Oceans, Lakes, Rivers (Surface Water)
+**** Underground (Groundwater)
+**[#Tan] Runoff
+*** Water that flows over the land's surface into rivers and lakes.
+**[#BurlyWood] Infiltration
+*** Water soaks into the soil from the ground level.
+@endmindmap
