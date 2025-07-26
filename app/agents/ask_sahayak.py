@@ -1,120 +1,203 @@
 # app/agents/ask_sahayak.py
 
-from google.adk.agents import LlmAgent
+from google.adk.agents import LlmAgent, SequentialAgent
 from google.adk.tools import google_search
+from .calendar_tool import manage_lesson_event
 
-# ──────────────────────────────────────────────────────────────────────────────
-# 1️⃣  Main answer generator (handles greetings & questions, bilingual JSON)
-answer_agent = LlmAgent(
-    name="answer_agent",
+chat_agent = LlmAgent(
+    name="chat_agent",
     model="gemini-2.5-pro",
     tools=[google_search],
     instruction="""
-You are a friendly multilingual teaching assistant.
-You MUST output exactly one JSON object, with these two fields and no extra text:
-
-{
-  "answer_en":"…",      // your English reply or answer
-  "answer_local":"…"     // the same reply translated into {locale}, or "" if no locale
-}
-
-RULES:
-1. If the user’s input is a greeting or small talk (e.g. "hi", "hello"), put a casual reply in answer_en.
-2. Otherwise treat the input as a question:
-   • Answer in clear English at a grade-{grade} level.
-3. If {locale} is non-empty, translate answer_en into that locale and place it in answer_local.
-   Otherwise answer_local must be an empty string.
-4. Do NOT output anything except the JSON object—no code fences, no plain text.
-
-Inputs available in context.state:
-• question (string)
-• grade (integer)
-• locale (string)
-""",
-    output_key="answer_json"
-)
-
-# ──────────────────────────────────────────────────────────────────────────────
-# 2️⃣  Analogy generator (bilingual JSON)
-analogy_agent = LlmAgent(
-    name="analogy_agent",
-    model="gemini-2.5-pro",
-    instruction="""
-Inputs available in context.state:
-  answer_en (string)
-  answer_local (string)
-  grade (integer)
-  locale (string)
+Inputs in context.state:
+- history: list of {sender,text}
 
 TASK:
-  • Generate a single analogy (≤200 words) that clarifies answer_en for a grade-{grade} student.
-  • Return a JSON object only, no extra text, in this shape:
-
-{
-  "analogy_en":"…",       // analogy in English
-  "analogy_local":"…"     // the same analogy in {locale}, or "" if no locale
-}
+You are a conversational teaching assistant.  The teacher may ask follow-up or clarification
+questions based on prior exchange.  Use only the previous messages in history to answer naturally.
+Write a helpful, concise reply.  Output only the reply text.
 """,
-    output_key="analogy_json"
+    output_key="chat_text"
 )
 
-# ──────────────────────────────────────────────────────────────────────────────
-# 3️⃣  Story generator (bilingual JSON)
+
+# ─── Explanation Agent ───────────────────────────────────────────────────────────
+explanation_agent = LlmAgent(
+    name="explanation_agent",
+    model="gemini-2.5-pro",
+    tools=[google_search],
+    instruction="""
+Inputs in context.state:
+- history: list of {sender,text}
+- grades: list of ints
+- language: string
+- topic: string
+
+TASK:
+Provide a clear, grade-appropriate explanation for "{topic}" to grades {grades}.
+Refer to previous messages in history when relevant.
+Write in {language} if non-empty; otherwise English.
+Output only the explanation text.
+""",
+    output_key="explanation_text"
+)
+
+# ─── Story Agent ─────────────────────────────────────────────────────────────────
 story_agent = LlmAgent(
     name="story_agent",
     model="gemini-2.5-pro",
+    tools=[google_search],
     instruction="""
-Inputs available in context.state:
-  answer_en (string)
-  answer_local (string)
-  grade (integer)
-  locale (string)
+Inputs in context.state:
+- history: list of {sender,text}
+- grades: list of ints
+- language: string
+- topic: string
 
 TASK:
-  • Write an engaging story (≤250 words) that illustrates the concept in answer_en for grade-{grade}.
-  • Return only this JSON object:
-
-{
-  "story_en":"…",        // story in English
-  "story_local":"…"      // same story in {locale}, or "" if no locale
-}
+Generate a ~200-word story about "{topic}" suitable for grades {grades}.
+Refer to history if you need to tie back to earlier context.
+Write in {language} if non-empty; otherwise English.
+Output only the story text.
 """,
-    output_key="story_json"
+    output_key="story_text"
 )
 
-# ──────────────────────────────────────────────────────────────────────────────
-# 4️⃣  Quiz generator (bilingual JSON, locked to answer_en)
+# ─── Quiz Agent ──────────────────────────────────────────────────────────────────
 quiz_agent = LlmAgent(
     name="quiz_agent",
     model="gemini-2.5-pro",
     instruction="""
-Inputs available in context.state:
-  answer_en (string)
-  grade (integer)
-  locale (string)
+Inputs in context.state:
+- history: list of {sender,text}
+- grades: list of ints
+- language: string
+- topic: string
 
 TASK:
-  • Generate exactly 3 multiple-choice questions (options A–D) that directly test comprehension of answer_en.
-  • Provide them in English under the key quiz_en.
-  • If locale is non-empty, translate each question & each option into that locale under quiz_local.
-  • Output only this JSON—no extra text:
-
-{
-  "quiz_en":[
-    {"q":"…","A":"…","B":"…","C":"…","D":"…","answer":"B"},
-    {"q":"…","A":"…","B":"…","C":"…","D":"…","answer":"A"},
-    {"q":"…","A":"…","B":"…","C":"…","D":"…","answer":"D"}
-  ],
-  "quiz_local":[
-    {"q":"…","A":"…","B":"…","C":"…","D":"…","answer":"B"},
-    {"q":"…","A":"…","B":"…","C":"…","D":"…","answer":"A"},
-    {"q":"…","A":"…","B":"…","C":"…","D":"…","answer":"D"}
-  ]
-}
-
-RULES:
-  • Use only the content of answer_en—do not introduce new facts.
-  • If locale is empty, set "quiz_local": [].
+Create 3 multiple-choice questions (A–D) testing "{topic}" for grades {grades}.
+Use history if you need to recall previous topics.
+Write in {language} if non-empty; otherwise English.
+Output plain text:
+1. Q… 
+   A) …
+   B) …
+   C) …
+   D) … 
+   Answer: B
+…repeat for 3 questions.
 """,
-    output_key="quiz_json"
+    output_key="quiz_text"
 )
+
+# ─── Lesson Plan Agent ───────────────────────────────────────────────────────────
+lesson_plan_agent = LlmAgent(
+    name="lesson_plan_agent",
+    model="gemini-2.5-pro",
+    tools=[google_search],
+    instruction="""
+Inputs in context.state:
+- history: list of {sender,text}
+- grades: list of ints
+- language: string
+- topic: string
+- date: string (YYYY-MM-DD)
+
+TASK:
+Draft a 20–30 minute lesson outline on "{topic}" for grades {grades}.
+Sections: Objectives, Materials, Introduction (5m), Activity (15m), Assessment (5m), Wrap-Up (5m).
+Refer to history if you need to re-use previous materials.
+Write in {language} if non-empty; otherwise English.
+Output only the outline text.
+""",
+    output_key="lesson_text"
+)
+
+# ─── Calendar Agent ──────────────────────────────────────────────────────────────
+calendar_agent = LlmAgent(
+    name="calendar_agent",
+    model="gemini-2.5-pro",
+    tools=[manage_lesson_event],  # ADK auto-wraps as a Function Tool
+    instruction="""
+Inputs in context.state:
+- history: list of {sender,text}
+- topic: string
+- grades: list of ints
+- date: string (YYYY-MM-DD)
+- lesson_text: string
+
+TASK:
+Call manage_lesson_event(date, topic,
+    description="Lesson for grades {grades} on {topic}",
+    attachment_content=lesson_text)
+Parse the returned dict and output ONLY the "message" field.
+""",
+    output_key="cal_text"
+)
+
+# ─── Game Agent ─────────────────────────────────────────────────────────────────
+game_agent = LlmAgent(
+    name="game_agent",
+    model="gemini-2.5-pro",
+    tools=[google_search],
+    instruction="""
+Inputs in context.state:
+- history: list of {sender,text}
+- grades: list of ints
+- language: string
+- topic: string
+
+TASK:
+Suggest an interactive {language or 'English'} game for grades {grades} about "{topic}".
+Include materials needed, rules, and example dialogue.
+Refer to history to build on prior games if needed.
+Output only the game description.
+""",
+    output_key="game_text"
+)
+
+# ─── Reflect Agent ──────────────────────────────────────────────────────────────
+reflect_agent = LlmAgent(
+    name="reflect_agent",
+    model="gemini-2.5-pro",
+    tools=[google_search],
+    instruction="""
+Inputs in context.state:
+- history: list of {sender,text}
+- reflection: string
+
+TASK:
+Analyze the teacher’s reflection: "{reflection}".
+Provide 4–6 bullet-point strategies to improve understanding next time.
+Refer to history if you need context on what was taught.
+Output only the bullet list.
+""",
+    output_key="reflect_text"
+)
+
+# ─── Compose Workflows with SequentialAgent ─────────────────────────────────────
+ask_explanation_seq = SequentialAgent(
+    name="ask_explanation_seq",
+    sub_agents=[explanation_agent]
+)
+ask_story_seq = SequentialAgent(
+    name="ask_story_seq",
+    sub_agents=[story_agent]
+)
+ask_quiz_seq = SequentialAgent(
+    name="ask_quiz_seq",
+    sub_agents=[quiz_agent]
+)
+ask_lesson_seq = SequentialAgent(
+    name="ask_lesson_seq",
+    sub_agents=[lesson_plan_agent, calendar_agent]
+)
+ask_game_seq = SequentialAgent(
+    name="ask_game_seq",
+    sub_agents=[game_agent]
+)
+ask_reflect_seq = SequentialAgent(
+    name="ask_reflect_seq",
+    sub_agents=[reflect_agent]
+)
+ask_chat_seq        = SequentialAgent(name="ask_chat_seq",        sub_agents=[chat_agent])
