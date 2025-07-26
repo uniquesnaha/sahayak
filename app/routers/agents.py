@@ -111,3 +111,45 @@ async def ask_sahayak(req: AskPrompt, user=Depends(get_current_user)):
 
     msgs.add({"sender":"bot","text":reply,"ts":firestore.SERVER_TIMESTAMP})
     return {"session_id": sid, "response": reply}
+
+#-------------------------------------------------------------------
+# app/routers/agents.py
+
+import os
+import tempfile
+from fastapi import APIRouter, Depends
+from fastapi.responses import FileResponse
+
+from app.agents.diagram_generator import run_diagram_pipeline
+
+class DiagramRequest(BaseModel):
+    prompt: str
+    diagram_type: str
+    grade: int
+
+@router.post("/diagram-generator")
+async def generate_diagram(req: DiagramRequest, user=Depends(get_current_user)):
+    """
+    Generates a single diagram image and returns it directly as a PNG file.
+    """
+    # 1️⃣ Call the pipeline (no user_id needed)
+    img_bytes = run_diagram_pipeline(
+        prompt=req.prompt,
+        diagram_type=req.diagram_type,
+        grade=req.grade
+    )
+
+    # 2️⃣ Write bytes to a temp file
+    tmp_dir = tempfile.gettempdir()
+    # use a unique filename to avoid collisions
+    filename = f"{req.diagram_type}_{uuid.uuid4().hex}.png"
+    tmp_path = os.path.join(tmp_dir, filename)
+    with open(tmp_path, "wb") as f:
+        f.write(img_bytes)
+
+    # 3️⃣ Return the file
+    return FileResponse(
+        path=tmp_path,
+        media_type="image/png",
+        filename=filename
+    )
