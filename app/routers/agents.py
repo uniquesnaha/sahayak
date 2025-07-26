@@ -1,8 +1,9 @@
 # app/routers/agents.py
 
-import uuid, json, re, logging
+import os, uuid, json, re, tempfile, logging
 from json import JSONDecodeError
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import FileResponse
 from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.genai import types as genai_types
@@ -12,25 +13,23 @@ from typing import Optional
 
 from app.agents.intent_parser import intent_agent
 from app.agents.ask_sahayak import (
-    ask_explanation_seq,
-    ask_story_seq,
-    ask_quiz_seq,
-    ask_lesson_seq,
-    ask_game_seq,
-    ask_reflect_seq,
-    ask_chat_seq,          # new
+    ask_explanation_seq, ask_story_seq, ask_quiz_seq,
+    ask_lesson_seq, ask_game_seq, ask_reflect_seq, ask_chat_seq
 )
+from app.agents.diagram_generator import run_diagram_pipeline
+from app.agents.mindmap_generator import run_mindmap_pipeline
 from app.deps import get_current_user
 
 router = APIRouter()
 db = firestore.Client()
 logger = logging.getLogger("app.routers.agents")
 
+# ─────────────────────── ASK SAHAYAK ───────────────────────
+
 class AskPrompt(BaseModel):
     prompt: str
     session_id: Optional[str] = None
 
-# include chat as possible intent
 AGENT_SEQS = {
     "explanation":  ask_explanation_seq,
     "story":        ask_story_seq,
@@ -76,16 +75,12 @@ async def ask_sahayak(req: AskPrompt, user=Depends(get_current_user)):
     intent = parsed.get("intent")
     slots  = parsed.get("slots", {})
 
-    # if no parsed intent but history exists -> chat
     if not intent:
-        if history:
-            intent = "chat"
-        else:
-            intent = "explanation"
+        intent = "chat" if history else "explanation"
+        if not history:
             slots = {"topic": req.prompt, "grades": [], "language": ""}
 
-    # fallback topic
-    if intent in ("story","quiz","lesson_plan","game") and not slots.get("topic"):
+    if intent in ("story", "quiz", "lesson_plan", "game") and not slots.get("topic"):
         slots["topic"] = req.prompt
     if intent == "reflect":
         slots["reflection"] = req.prompt
@@ -112,15 +107,8 @@ async def ask_sahayak(req: AskPrompt, user=Depends(get_current_user)):
     msgs.add({"sender":"bot","text":reply,"ts":firestore.SERVER_TIMESTAMP})
     return {"session_id": sid, "response": reply}
 
-#-------------------------------------------------------------------
-# app/routers/agents.py
 
-import os
-import tempfile
-from fastapi import APIRouter, Depends
-from fastapi.responses import FileResponse
-
-from app.agents.diagram_generator import run_diagram_pipeline
+# ─────────────────────── DIAGRAM GENERATOR (Image) ───────────────────────
 
 class DiagramRequest(BaseModel):
     prompt: str
@@ -129,27 +117,41 @@ class DiagramRequest(BaseModel):
 
 @router.post("/diagram-generator")
 async def generate_diagram(req: DiagramRequest, user=Depends(get_current_user)):
-    """
-    Generates a single diagram image and returns it directly as a PNG file.
-    """
-    # 1️⃣ Call the pipeline (no user_id needed)
     img_bytes = run_diagram_pipeline(
         prompt=req.prompt,
         diagram_type=req.diagram_type,
         grade=req.grade
     )
-
-    # 2️⃣ Write bytes to a temp file
     tmp_dir = tempfile.gettempdir()
-    # use a unique filename to avoid collisions
     filename = f"{req.diagram_type}_{uuid.uuid4().hex}.png"
     tmp_path = os.path.join(tmp_dir, filename)
     with open(tmp_path, "wb") as f:
         f.write(img_bytes)
 
-    # 3️⃣ Return the file
     return FileResponse(
         path=tmp_path,
         media_type="image/png",
         filename=filename
     )
+
+
+# ─────────────────────── MIND MAP GENERATOR (PlantUML Code) ───────────────────────
+
+class MindmapRequest(BaseModel):
+    text: str
+    grade: int
+    subject: str
+
+
+@router.post("/mindmap-generator")
+async def generate_mindmap(req: MindmapRequest, user=Depends(get_current_user)):
+    """
+    Returns cleaned PlantUML code as a JSON response.
+    JSON will escape newlines (\n) but the code is valid and will render fine.
+    """
+    result = run_mindmap_pipeline(
+        text=req.text,
+        grade=req.grade,
+        subject=req.subject
+    )
+    return { "code": result["code"] }  # stays JSON with valid PlantUML inside
