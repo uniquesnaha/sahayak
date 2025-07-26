@@ -1,6 +1,24 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Home, Bot, RefreshCw, Settings, HelpCircle, Menu, Sparkles } from 'lucide-react'
+import {
+  Home,
+  MessageCircle,
+  BookOpen,
+  Settings,
+  HelpCircle,
+  Menu,
+  Terminal
+} from 'lucide-react'
+
+const navLinks = [
+  { to: '/', icon: Home, label: 'Home' },
+  { to: '/ask-sahayak', icon: MessageCircle, label: 'Chat' },
+  { to: '/resource-bazaar', icon: BookOpen, label: 'Resources' }
+]
+const bottomLinks = [
+  { to: '/settings', icon: Settings, label: 'Settings' },
+  { to: '/help', icon: HelpCircle, label: 'Help' }
+]
 
 export default function Layout({ children }) {
   const { pathname } = useLocation()
@@ -10,93 +28,61 @@ export default function Layout({ children }) {
     <Link
       key={to}
       to={to}
-      className={`group relative flex items-center p-3 rounded-xl transition-all duration-300 ${
-        pathname === to
-          ? 'bg-gradient-to-r from-purple-600/20 to-pink-600/20 text-white border border-purple-500/30'
-          : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
-      }`}
+      className={`flex items-center gap-3 px-4 py-3 rounded-lg
+        transition-colors duration-200
+        ${pathname === to
+          ? 'bg-[#191b20] text-blue-400 border border-blue-900/40'
+          : 'text-gray-400 hover:text-white hover:bg-[#23242a]'
+        }`}
+      style={{ fontWeight: 500, letterSpacing: '-0.01em', fontSize: '1rem' }}
     >
-      <Icon className={`w-5 h-5 mr-3 transition-colors duration-300 ${
-        pathname === to ? 'text-purple-400' : 'group-hover:text-purple-400'
-      }`} />
-      {sidebarOpen && <span className="font-medium">{label}</span>}
-      {pathname === to && (
-        <div className="absolute right-2 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-      )}
+      <Icon size={20} className="shrink-0" />
+      {sidebarOpen && <span>{label}</span>}
     </Link>
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex overflow-hidden">
-      {/* Animated background elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
+    <div className="min-h-screen flex bg-[#131417] font-sans">
       {/* Sidebar */}
-      <aside className={`relative z-10 ${sidebarOpen ? 'w-72' : 'w-20'} bg-gray-900/80 backdrop-blur-xl border-r border-gray-700/50 transition-all duration-300 flex flex-col`}>
-        <div className="p-6 border-b border-gray-700/50">
-          <div className="flex items-center justify-between">
-            <div className={`flex items-center ${sidebarOpen ? 'space-x-3' : 'justify-center'}`}>
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              {sidebarOpen && (
-                <div>
-                  <h2 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Sahayak
-                  </h2>
-                  <p className="text-xs text-gray-400">AI Assistant</p>
-                </div>
-              )}
+      <aside className={`${sidebarOpen ? 'w-56' : 'w-14'} transition-all duration-200 bg-[#16171c] border-r border-[#23242a] flex flex-col h-screen`}>
+        <div className="flex items-center justify-between px-4 py-6 border-b border-[#23242a]">
+          <div className={`${sidebarOpen ? 'flex items-center gap-3' : 'justify-center w-full'}`}>
+            <div className="w-9 h-9 bg-[#232842] rounded flex items-center justify-center">
+              <Terminal size={20} className="text-blue-400" />
             </div>
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="p-2 rounded-lg bg-gray-800/50 text-gray-400 hover:text-white transition-colors"
-            >
-              <Menu className="w-4 h-4" />
-            </button>
+            {sidebarOpen && (
+              <div>
+                <h2 className="text-lg font-semibold text-gray-100 tracking-tight">Sahayak</h2>
+                <span className="text-xs text-gray-500">AI Assistant</span>
+              </div>
+            )}
           </div>
+          <button
+            onClick={() => setSidebarOpen(o => !o)}
+            className="p-2 rounded-md bg-[#191b20] text-gray-400 hover:text-white hover:bg-[#23242a] transition-colors"
+            aria-label="Toggle sidebar"
+          >
+            <Menu size={19} />
+          </button>
         </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-2">
-          {navItem('/', Home, 'Home')}
-          {navItem('/ask-sahayak', Bot, 'Chat')}
-          {navItem('/resource-bazaar', RefreshCw, 'Resources')}
-          
-          {sidebarOpen && (
-            <div className="mt-8 pt-6 border-t border-gray-700/50">
-              <h3 className="text-xs font-semibold uppercase text-gray-500 mb-3 px-3">
-                Recent Chats
-              </h3>
-              <div className="space-y-1">
-                <div className="p-2 rounded-lg text-sm text-gray-500 hover:bg-gray-800/30 cursor-pointer transition-colors">
-                  How to optimize React...
-                </div>
-                <div className="p-2 rounded-lg text-sm text-gray-500 hover:bg-gray-800/30 cursor-pointer transition-colors">
-                  JavaScript best practices
-                </div>
-                <div className="p-2 rounded-lg text-sm text-gray-500 hover:bg-gray-800/30 cursor-pointer transition-colors">
-                  UI/UX design tips
-                </div>
-              </div>
-            </div>
-          )}
+        <nav className="flex-1 flex flex-col gap-2 py-6">
+          {navLinks.map(({ to, icon, label }) => navItem(to, icon, label))}
         </nav>
-
-        {/* Bottom navigation */}
-        <nav className="p-4 space-y-2 border-t border-gray-700/50">
-          {navItem('/settings', Settings, 'Settings')}
-          {navItem('/help', HelpCircle, 'Help')}
+        {sidebarOpen && (
+          <section className="border-t border-[#23242a] py-3 px-4">
+            <h3 className="text-xs text-gray-500 tracking-wider mb-3 font-semibold uppercase">Recent</h3>
+            <div className="flex flex-col gap-1">
+              <div className="text-gray-400 hover:bg-[#23242a] px-2 py-2 rounded text-sm cursor-pointer">Optimize React...</div>
+              <div className="text-gray-400 hover:bg-[#23242a] px-2 py-2 rounded text-sm cursor-pointer">JS best practices</div>
+              <div className="text-gray-400 hover:bg-[#23242a] px-2 py-2 rounded text-sm cursor-pointer">UI/UX tips</div>
+            </div>
+          </section>
+        )}
+        <nav className="border-t border-[#23242a] py-4 flex flex-col gap-2 px-2">
+          {bottomLinks.map(({ to, icon, label }) => navItem(to, icon, label))}
         </nav>
       </aside>
-
-      {/* Main content */}
-      <main className="flex-1 relative z-10">
-        {children}
-      </main>
+      <main className="flex-1 px-8 py-8">{children}</main>
     </div>
   )
 }

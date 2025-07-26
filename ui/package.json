@@ -12,7 +12,9 @@
     "lucide-react": "^0.259.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^6.4.0",
+    "run": "^1.5.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

@@ -8,6 +8,7 @@ import ReflectionCoach from './pages/ReflectionCoach';
 import LessonPlanner from './pages/LessonPlanner';
 import AutoEval from './pages/AutoEval';
 import ResourceBazaar from './pages/ResourceBazaar';
+import MindMap from './pages/MindMap';
 
 export default function AppRoutes() {
   return (
@@ -21,6 +22,8 @@ export default function AppRoutes() {
       <Route path="/lesson-planner" element={<LessonPlanner />} />
       <Route path="/auto-eval" element={<AutoEval />} />
       <Route path="/resource-bazaar" element={<ResourceBazaar />} />
+      <Route path="/mind-map" element={<MindMap />} />
+      {/* Add more routes as needed */}
     </Routes>
   );
 }
