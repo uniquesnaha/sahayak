@@ -3,6 +3,7 @@ import json
 import logging
 import vertexai
 from vertexai.preview.generative_models import GenerativeModel
+#inc
 
 logger = logging.getLogger("app.agents.mindmap_generator")
 
