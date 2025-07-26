@@ -5499,3 +5499,6 @@ Raw response:
 2025-07-26 17:20:55,160 DEBUG httpcore.connection: close.started
 2025-07-26 17:20:55,176 DEBUG httpcore.connection: close.complete
 2025-07-26 19:00:12,742 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line diagram of: Create a diagram of water cycle
+2025-07-26 19:28:25,569 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line-art diagram of: water cycle
+2025-07-26 19:33:32,129 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line-art diagram of: water cycle
+2025-07-26 19:35:07,894 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a sketch diagram of: water cycle
