@@ -1,3 +1,0 @@
-run:
-  service: fastapi-app-service
-  region: us-central1  # or your preferred GCP region like us-central1
