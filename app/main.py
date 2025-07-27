@@ -44,6 +44,7 @@ app.add_middleware(
 
 # 3. Mount the agents router
 app.include_router(agents_router, prefix="/api/agents", tags=["agents"])
+app.include_router(agents_router, prefix="/api")
 
 
 @app.get("/health")

@@ -5713,3 +5713,1750 @@ BackgroundColor #FFFFFF
 **[#BurlyWood] Infiltration
 *** Water soaks into the soil from the ground level.
 @endmindmap
+2025-07-27 00:36:00,665 DEBUG app.agents.mindmap_generator: 🧠 Mindmap prompt: As a Grade 7 Science teacher, generate PlantUML code for a mind map diagram based on the topic: Water cycle. Use rectangular or cloud-style nodes. Only return valid PlantUML code. Do not include markdown or explanations.
+2025-07-27 00:36:16,265 DEBUG app.agents.mindmap_generator: 🪵 Raw Gemini response:
+"@startmindmap\n<style>\nmindmapDiagram {\n  node {\n    shape cloud\n  }\n}\n</style>\n\n* The Water Cycle\n\n** Evaporation\n*** Sun's energy heats water\n*** Liquid turns into Gas\n**** (Water Vapor)\n*** Transpiration\n**** Water vapor from plants\n\n** Condensation\n*** Water vapor cools in the atmosphere\n*** Gas turns back into Liquid\n*** Forms Clouds\n\n** Precipitation\n*** Water falls from clouds\n***_ Forms include:\n**** Rain\n**** Snow\n**** Sleet\n**** Hail\n\n** Collection\n*** Water gathers on Earth\n*** Runoff\n**** Water flows over land\n*** Infiltration\n**** Water soaks into the ground\n***** (Groundwater)\n*** Gathers in bodies of water\n**** Oceans\n**** Lakes\n**** Rivers\n\n@endmindmap"
+2025-07-27 00:36:16,265 DEBUG app.agents.mindmap_generator: ⚙️ Raw before cleaning:
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    shape cloud
+  }
+}
+</style>
+
+* The Water Cycle
+
+** Evaporation
+*** Sun's energy heats water
+*** Liquid turns into Gas
+**** (Water Vapor)
+*** Transpiration
+**** Water vapor from plants
+
+** Condensation
+*** Water vapor cools in the atmosphere
+*** Gas turns back into Liquid
+*** Forms Clouds
+
+** Precipitation
+*** Water falls from clouds
+***_ Forms include:
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+
+** Collection
+*** Water gathers on Earth
+*** Runoff
+**** Water flows over land
+*** Infiltration
+**** Water soaks into the ground
+***** (Groundwater)
+*** Gathers in bodies of water
+**** Oceans
+**** Lakes
+**** Rivers
+
+@endmindmap
+2025-07-27 00:36:16,265 DEBUG app.agents.mindmap_generator: ✅ Cleaned PlantUML code:
+@startmindmap
+<style>
+mindmapDiagram {
+node {
+shape cloud
+}
+}
+</style>
+* The Water Cycle
+** Evaporation
+*** Sun's energy heats water
+*** Liquid turns into Gas
+**** (Water Vapor)
+*** Transpiration
+**** Water vapor from plants
+** Condensation
+*** Water vapor cools in the atmosphere
+*** Gas turns back into Liquid
+*** Forms Clouds
+** Precipitation
+*** Water falls from clouds
+***_ Forms include:
+**** Rain
+**** Snow
+**** Sleet
+**** Hail
+** Collection
+*** Water gathers on Earth
+*** Runoff
+**** Water flows over land
+*** Infiltration
+**** Water soaks into the ground
+***** (Groundwater)
+*** Gathers in bodies of water
+**** Oceans
+**** Lakes
+**** Rivers
+@endmindmap
+2025-07-27 01:21:54,888 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 01:21:55,174 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 01:21:58,322 DEBUG app.routers.agents: 🔍 Loaded history for 6a1e76be-54d2-4c71-bdea-180894972b0a: [{'sender': 'bot', 'text': '### **Sensory Color Hunt**\n\nThis game helps toddlers learn their colors while exploring different textures. It\'s an engaging activity that stimulates their sense of touch and sight.\n\n**Materials Needed:**\n\n*   A variety of objects with different colors and textures (e.g., soft pillows, hard blocks, smooth balls, bumpy toys, fluffy blankets)\n*   A basket or bag (optional)\n\n**Rules of the Game:**\n\n1.  The parent or caregiver calls out a color.\n2.  The child searches the room for an object of that color.\n3.  Once the child finds an object, they bring it back.\n4.  The adult and child talk about the object. Encourage the child to describe how it feels. Is it soft, hard, smooth, or bumpy?\n\n**Example Dialogue:**\n\n**Parent:** "Let\'s play a game! Can you find something that is **red**?"\n\n**(The child looks around and picks up a red ball.)**\n\n**Parent:** "You found the red ball! That\'s wonderful! How does the ball feel? Is it smooth or bumpy?"\n\n**Child:** "Smooth!"\n\n**Parent:** "That\'s right! It feels smooth. Great job! Now, can you find something that is **blue** and **soft**?"\n\n**(The child finds a blue, fluffy pillow.)**\n\n**Parent:** "You did it! You found the soft, blue pillow. Give it a squeeze! It feels so cozy."'}, {'sender': 'user', 'text': 'Vanakkam'}, {'sender': 'bot', 'text': 'Vanakkam! Ungalukku eppadi uthava mudiyum? ( வணக்கம்! உங்களுக்கு எப்படி உதவ முடியும்? )'}, {'sender': 'user', 'text': 'Enaku oru kadha sollunga'}, {'sender': 'bot', 'text': 'நிச்சயமாக! உங்களுக்கு எந்த மாதிரியான கதை வேண்டும்? உதாரணமாக, சிறுவர்களுக்கான கதையா அல்லது பெரியவர்களுக்கான கதையா? மேலும், உங்களுக்கு விருப்பமான தலைப்பு ஏதேனும் உள்ளதா? (எ.கா. விலங்குகள், ராஜா-ராணி கதைகள், அறிவியல் புனைகதைகள்).'}, {'sender': 'user', 'text': 'siruvargal Kathai'}, {'sender': 'bot', 'text': 'ஓர் அடர்ந்த காட்டில் ஒரு சிறிய முயல் குடும்பம் வாழ்ந்து வந்தது. அந்த முயல் கூட்டத்தில், சுட்டி என்ற ஒரு குட்டி முயல் இருந்தது. சுட்டி மிகவும் புத்திசாலி மற்றும் வேகமானது. ஒரு நாள், காட்டில் உள்ள விலங்குகளுக்குள் ஒரு ஓட்டப்பந்தயம் நடத்த முடிவு செய்யப்பட்டது.\n\nநரி, மான், குரங்கு என பல விலங்குகள் போட்டியில் பங்கேற்றன. பந்தயம் தொடங்கியது. நரி தந்திரமாக குறுக்கு வழியில் ஓட நினைத்தது. ஆனால் சுட்டி முயல் நேர்மையாக தன் முழு பலத்தையும் பயன்படுத்தி ஓடியது. அதன் வேகத்தைக் கண்டு மற்ற விலங்குகள் ஆச்சரியப்பட்டன.\n\nவழியில் ஒரு ஆமை மெதுவாகச் செல்வதைப் பார்த்த சுட்டி, அதைக் கேலி செய்யாமல் ஊக்கப்படுத்தியது.สุดท้าย, சுட்டி முயல் தனது விடாமுயற்சியால் பந்தயத்தில் முதல் பரிசை வென்றது. மற்ற விலங்குகள் அனைத்தும் சுட்டியைப் பாராட்டின. அன்று முதல், காட்டில் உள்ள அனைவரும் சுட்டியை "வேகமான வீரன்" என்று அன்புடன் அழைத்தனர். இந்தக் கதை, விடாமுயற்சியும் நேர்மையும் எப்போதும் வெற்றியைத் தரும் என்பதை உணர்த்துகிறது.'}, {'sender': 'user', 'text': 'Give me some creative project ideas for web development'}, {'sender': 'bot', 'text': 'Of course! Here are some creative project ideas for web development, ranging from beginner-friendly to more advanced, to help you build your portfolio and sharpen your skills. \n\n ### For Beginners: Giving Classic Projects a Creative Twist \n\n Starting with simple projects is a great way to master the basics. Instead of the usual tutorials, try adding a unique feature to these common beginner projects. \n\n *   **Interactive Portfolio or Resume**: Go beyond a static page. Create a resume that features animations, a timeline of your skills, or even themes that change with the time of day. \n *   **Weather App with Personality**: Don\'t just show the temperature. Use an API to fetch weather data and add custom icons or animations for different conditions like rain or sun. You could also use a geolocation API to automatically find the user\'s location. \n *   **To-Do List with Local Storage**: Build a to-do list that saves tasks in the browser\'s local storage so they don\'t disappear when the page is refreshed. For an extra challenge, add categories or themes. \n *   **JavaScript Quiz Game**: Create a multiple-choice quiz. This will help you practice JavaScript logic by checking answers and keeping score. \n\n ### Intermediate: Engaging and Interactive Apps \n\n These projects involve more complex logic, data management, and the use of external data sources. \n\n *   **AI-Powered Recipe Finder**: Build an application that suggests recipes based on ingredients a user has on hand. You can use a recipe API and even integrate AI to generate suggestions. \n *   **Movie Watchlist with an API**: Create a personal movie tracker that lets users search for films, add them to a "watchlist," and mark them as "watched." You can pull movie data from an API like IMDb. \n *   **Habit Tracker with Gamification**: Design a habit tracker with a calendar interface to monitor daily progress. To make it more engaging, add visual progress bars or a rewards system. \n *   **E-commerce Product Page**: Clone the product page of a popular e-commerce site. This project will help you practice your layout skills and prepare you for real-world tasks, as many companies value e-commerce experience. \n\n ### Advanced: Full-Stack and Real-World Applications \n\n These ideas require both front-end and back-end development skills and often solve real-world problems. \n\n *   **Niche Social Media Platform**: Instead of a broad social network, create one for a specific community, like hobbyists, students, or pet owners. This would involve user authentication, media uploads, and real-time interactions. \n *   **Real-Time Chat Application**: Develop a chat application where users can communicate in real time. This is a great way to learn about WebSockets and real-time data handling. \n *   **Data Visualization Dashboard**: Build a dashboard that displays real-time data, such as stock market trends or social media analytics. You can use libraries like Chart.js to create interactive graphs and charts. \n *   **Collaborative Project Management Tool**: Create a project management application similar to Trello. This would allow users to create tasks, set deadlines, and track progress, which involves complex state management. \n *   **Browser-Based Game**: Develop a multiplayer game like Connect Four or a card game. This type of project is a fun way to work on game logic and real-time data synchronization.'}, {'sender': 'user', 'text': 'hi'}]
+2025-07-27 01:21:59,737 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 01:21:59,755 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+You receive a single teacher prompt. Parse it into JSON with these keys:
+{
+  "intent":"<one of: chat,explanation, story, quiz, lesson_plan, game, reflect>",
+  "slots":{
+    "grades":[ints],      // e.g. [5,6]
+    "language":"<string>",// e.g. "English" if not specified explicitly
+    "topic":"<string>",  
+    "date":"YYYY-MM-DD"   // current date if not specified, or calculate date if specified as 'yesterday', 'tomorrow', etc.
+  }
+}
+Chat: Simple chat for interacting with common user questions
+Explanation: Any explicit questions or explanation about something specific
+Story: Any story or narrative that the teacher wants to share or ask for.
+Quiz: Any quiz or question-answer format that the teacher wants to create.  
+Lesson Plan: Any lesson plan or structured teaching plan that the teacher wants to create.
+Game: Any game or interactive activity that the teacher wants to create.
+Reflect: Any reflection or feedback that the teacher wants about their teaching , to improve.
+Only output the JSON object, no extra text.
+
+
+You are an agent. Your internal name is "intent_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 01:21:59,755 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 01:21:59,873 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 01:22:00,057 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 01:22:00,105 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 01:22:00,138 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B581700>
+2025-07-27 01:22:00,138 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B4EB250> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 01:22:00,222 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B581640>
+2025-07-27 01:22:00,222 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 01:22:00,222 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 01:22:00,222 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 01:22:00,222 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 01:22:00,222 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 01:22:03,640 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 19:52:04 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 01:22:03,640 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 01:22:03,642 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 01:22:03,642 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 01:22:03,642 DEBUG httpcore.http11: response_closed.started
+2025-07-27 01:22:03,642 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 01:22:03,787 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "intent": "chat",
+  "slots": {
+    "grades": [],
+    "language": "English",
+    "topic": null,
+    "date": "2024-05-21"
+  }
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 19:52:04 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"intent\": \"chat\",\n  \"slots\": {\n    \"grades\": [],\n    \"language\": \"English\",\n    \"topic\": null,\n    \"date\": \"2024-05-21\"\n  }\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.4270693158346509}],"create_time":"2025-07-26T19:52:02.395392Z","response_id":"4jGFaICRGMGX2PgP6e3JiQE","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":63,"candidates_tokens_details":[{"modality":"TEXT","token_count":63}],"prompt_token_count":268,"prompt_tokens_details":[{"modality":"TEXT","token_count":268}],"thoughts_token_count":68,"total_token_count":399,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 01:22:03,874 DEBUG app.routers.agents: 🔍 Raw intent output: '```json\n{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": null,\n    "date": "2024-05-21"\n  }\n}\n```'
+2025-07-27 01:22:03,879 DEBUG app.routers.agents: 🔍 Cleaned intent JSON: '{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": null,\n    "date": "2024-05-21"\n  }\n}'
+2025-07-27 01:22:05,270 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 01:22:05,270 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+Inputs in context.state:
+- history: list of {sender,text}
+
+TASK:
+You are a conversational teaching assistant.  The teacher may ask follow-up or clarification
+questions based on prior exchange.  Use only the previous messages in history to answer naturally.
+Write a helpful, concise reply.  Output only the reply text.
+
+
+You are an agent. Your internal name is "chat_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 01:22:05,270 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 01:22:05,273 DEBUG httpcore.connection: close.started
+2025-07-27 01:22:05,389 DEBUG httpcore.connection: close.complete
+2025-07-27 01:22:05,389 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 01:22:05,587 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 01:22:05,590 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 01:22:05,623 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5C3EF0>
+2025-07-27 01:22:05,623 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B573350> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 01:22:05,689 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5C3F80>
+2025-07-27 01:22:05,689 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 01:22:05,689 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 01:22:05,689 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 01:22:05,689 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 01:22:05,689 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 01:22:07,023 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 19:52:07 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 01:22:07,023 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 01:22:07,023 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 01:22:07,023 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 01:22:07,023 DEBUG httpcore.http11: response_closed.started
+2025-07-27 01:22:07,023 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 01:22:07,023 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Hello! How can I help you today?
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 19:52:07 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Hello! How can I help you today?"}],"role":"model"},"finish_reason":"STOP","grounding_metadata":{}}],"create_time":"2025-07-26T19:52:06.656383Z","response_id":"5jGFaP-HKNWbnvgP6offuQU","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":9,"candidates_tokens_details":[{"modality":"TEXT","token_count":9}],"prompt_token_count":89,"prompt_tokens_details":[{"modality":"TEXT","token_count":89}],"thoughts_token_count":36,"total_token_count":134,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 01:22:07,038 DEBUG app.routers.agents: 🔸 chunk from chat_agent: 'Hello! How can I help you today?'
+2025-07-27 01:22:07,040 DEBUG app.routers.agents: ✅ final reply: 'Hello! How can I help you today?'
+2025-07-27 01:22:07,389 DEBUG httpcore.connection: close.started
+2025-07-27 01:22:07,389 DEBUG httpcore.connection: close.complete
+2025-07-27 02:34:08,070 DEBUG urllib3.connectionpool: Resetting dropped connection: oauth2.googleapis.com
+2025-07-27 02:34:08,588 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 02:34:11,844 DEBUG app.routers.agents: 🔍 Loaded history for 6a1e76be-54d2-4c71-bdea-180894972b0a: [{'sender': 'bot', 'text': 'Vanakkam! Ungalukku eppadi uthava mudiyum? ( வணக்கம்! உங்களுக்கு எப்படி உதவ முடியும்? )'}, {'sender': 'user', 'text': 'Enaku oru kadha sollunga'}, {'sender': 'bot', 'text': 'நிச்சயமாக! உங்களுக்கு எந்த மாதிரியான கதை வேண்டும்? உதாரணமாக, சிறுவர்களுக்கான கதையா அல்லது பெரியவர்களுக்கான கதையா? மேலும், உங்களுக்கு விருப்பமான தலைப்பு ஏதேனும் உள்ளதா? (எ.கா. விலங்குகள், ராஜா-ராணி கதைகள், அறிவியல் புனைகதைகள்).'}, {'sender': 'user', 'text': 'siruvargal Kathai'}, {'sender': 'bot', 'text': 'ஓர் அடர்ந்த காட்டில் ஒரு சிறிய முயல் குடும்பம் வாழ்ந்து வந்தது. அந்த முயல் கூட்டத்தில், சுட்டி என்ற ஒரு குட்டி முயல் இருந்தது. சுட்டி மிகவும் புத்திசாலி மற்றும் வேகமானது. ஒரு நாள், காட்டில் உள்ள விலங்குகளுக்குள் ஒரு ஓட்டப்பந்தயம் நடத்த முடிவு செய்யப்பட்டது.\n\nநரி, மான், குரங்கு என பல விலங்குகள் போட்டியில் பங்கேற்றன. பந்தயம் தொடங்கியது. நரி தந்திரமாக குறுக்கு வழியில் ஓட நினைத்தது. ஆனால் சுட்டி முயல் நேர்மையாக தன் முழு பலத்தையும் பயன்படுத்தி ஓடியது. அதன் வேகத்தைக் கண்டு மற்ற விலங்குகள் ஆச்சரியப்பட்டன.\n\nவழியில் ஒரு ஆமை மெதுவாகச் செல்வதைப் பார்த்த சுட்டி, அதைக் கேலி செய்யாமல் ஊக்கப்படுத்தியது.สุดท้าย, சுட்டி முயல் தனது விடாமுயற்சியால் பந்தயத்தில் முதல் பரிசை வென்றது. மற்ற விலங்குகள் அனைத்தும் சுட்டியைப் பாராட்டின. அன்று முதல், காட்டில் உள்ள அனைவரும் சுட்டியை "வேகமான வீரன்" என்று அன்புடன் அழைத்தனர். இந்தக் கதை, விடாமுயற்சியும் நேர்மையும் எப்போதும் வெற்றியைத் தரும் என்பதை உணர்த்துகிறது.'}, {'sender': 'user', 'text': 'Give me some creative project ideas for web development'}, {'sender': 'bot', 'text': 'Of course! Here are some creative project ideas for web development, ranging from beginner-friendly to more advanced, to help you build your portfolio and sharpen your skills. \n\n ### For Beginners: Giving Classic Projects a Creative Twist \n\n Starting with simple projects is a great way to master the basics. Instead of the usual tutorials, try adding a unique feature to these common beginner projects. \n\n *   **Interactive Portfolio or Resume**: Go beyond a static page. Create a resume that features animations, a timeline of your skills, or even themes that change with the time of day. \n *   **Weather App with Personality**: Don\'t just show the temperature. Use an API to fetch weather data and add custom icons or animations for different conditions like rain or sun. You could also use a geolocation API to automatically find the user\'s location. \n *   **To-Do List with Local Storage**: Build a to-do list that saves tasks in the browser\'s local storage so they don\'t disappear when the page is refreshed. For an extra challenge, add categories or themes. \n *   **JavaScript Quiz Game**: Create a multiple-choice quiz. This will help you practice JavaScript logic by checking answers and keeping score. \n\n ### Intermediate: Engaging and Interactive Apps \n\n These projects involve more complex logic, data management, and the use of external data sources. \n\n *   **AI-Powered Recipe Finder**: Build an application that suggests recipes based on ingredients a user has on hand. You can use a recipe API and even integrate AI to generate suggestions. \n *   **Movie Watchlist with an API**: Create a personal movie tracker that lets users search for films, add them to a "watchlist," and mark them as "watched." You can pull movie data from an API like IMDb. \n *   **Habit Tracker with Gamification**: Design a habit tracker with a calendar interface to monitor daily progress. To make it more engaging, add visual progress bars or a rewards system. \n *   **E-commerce Product Page**: Clone the product page of a popular e-commerce site. This project will help you practice your layout skills and prepare you for real-world tasks, as many companies value e-commerce experience. \n\n ### Advanced: Full-Stack and Real-World Applications \n\n These ideas require both front-end and back-end development skills and often solve real-world problems. \n\n *   **Niche Social Media Platform**: Instead of a broad social network, create one for a specific community, like hobbyists, students, or pet owners. This would involve user authentication, media uploads, and real-time interactions. \n *   **Real-Time Chat Application**: Develop a chat application where users can communicate in real time. This is a great way to learn about WebSockets and real-time data handling. \n *   **Data Visualization Dashboard**: Build a dashboard that displays real-time data, such as stock market trends or social media analytics. You can use libraries like Chart.js to create interactive graphs and charts. \n *   **Collaborative Project Management Tool**: Create a project management application similar to Trello. This would allow users to create tasks, set deadlines, and track progress, which involves complex state management. \n *   **Browser-Based Game**: Develop a multiplayer game like Connect Four or a card game. This type of project is a fun way to work on game logic and real-time data synchronization.'}, {'sender': 'user', 'text': 'hi'}, {'sender': 'bot', 'text': 'Hello! How can I help you today?'}, {'sender': 'user', 'text': 'generate a story in tamil for class 6 students about science'}]
+2025-07-27 02:34:13,377 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 02:34:13,415 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+You receive a single teacher prompt. Parse it into JSON with these keys:
+{
+  "intent":"<one of: chat,explanation, story, quiz, lesson_plan, game, reflect>",
+  "slots":{
+    "grades":[ints],      // e.g. [5,6]
+    "language":"<string>",// e.g. "English" if not specified explicitly
+    "topic":"<string>",  
+    "date":"YYYY-MM-DD"   // current date if not specified, or calculate date if specified as 'yesterday', 'tomorrow', etc.
+  }
+}
+Chat: Simple chat for interacting with common user questions
+Explanation: Any explicit questions or explanation about something specific
+Story: Any story or narrative that the teacher wants to share or ask for.
+Quiz: Any quiz or question-answer format that the teacher wants to create.  
+Lesson Plan: Any lesson plan or structured teaching plan that the teacher wants to create.
+Game: Any game or interactive activity that the teacher wants to create.
+Reflect: Any reflection or feedback that the teacher wants about their teaching , to improve.
+Only output the JSON object, no extra text.
+
+
+You are an agent. Your internal name is "intent_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"generate a story in tamil for class 6 students about science"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 02:34:13,417 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 02:34:13,768 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 02:34:14,061 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 02:34:14,068 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 02:34:14,722 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B507C50>
+2025-07-27 02:34:14,722 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B4EA450> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 02:34:14,779 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5567B0>
+2025-07-27 02:34:14,780 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 02:34:14,780 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 02:34:14,780 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 02:34:14,781 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 02:34:14,782 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 02:34:20,694 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:04:21 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 02:34:20,698 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 02:34:20,698 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 02:34:20,702 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 02:34:20,703 DEBUG httpcore.http11: response_closed.started
+2025-07-27 02:34:20,704 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 02:34:20,807 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "intent": "story",
+  "slots": {
+    "grades": [
+      6
+    ],
+    "language": "Tamil",
+    "topic": "science",
+    "date": "2024-05-21"
+  }
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:04:21 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"intent\": \"story\",\n  \"slots\": {\n    \"grades\": [\n      6\n    ],\n    \"language\": \"Tamil\",\n    \"topic\": \"science\",\n    \"date\": \"2024-05-21\"\n  }\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.5408764430454799}],"create_time":"2025-07-26T21:04:16.855412Z","response_id":"0EKFaPSaNJLfhMIPuPmNkAM","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":70,"candidates_tokens_details":[{"modality":"TEXT","token_count":70}],"prompt_token_count":279,"prompt_tokens_details":[{"modality":"TEXT","token_count":279}],"thoughts_token_count":391,"total_token_count":740,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 02:34:20,840 DEBUG app.routers.agents: 🔍 Raw intent output: '```json\n{\n  "intent": "story",\n  "slots": {\n    "grades": [\n      6\n    ],\n    "language": "Tamil",\n    "topic": "science",\n    "date": "2024-05-21"\n  }\n}\n```'
+2025-07-27 02:34:20,841 DEBUG app.routers.agents: 🔍 Cleaned intent JSON: '{\n  "intent": "story",\n  "slots": {\n    "grades": [\n      6\n    ],\n    "language": "Tamil",\n    "topic": "science",\n    "date": "2024-05-21"\n  }\n}'
+2025-07-27 02:34:21,685 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 02:34:21,685 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+Inputs in context.state:
+- history: list of {sender,text}
+- grades: list of ints
+- language: string
+- topic: string
+
+TASK:
+Generate a ~200-word story about "science" suitable for grades [6].
+Refer to history if you need to tie back to earlier context.
+Write in Tamil if non-empty; otherwise English.
+Output only the story text.
+
+
+You are an agent. Your internal name is "story_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"generate a story in tamil for class 6 students about science"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 02:34:21,686 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 02:34:21,689 DEBUG httpcore.connection: close.started
+2025-07-27 02:34:21,689 DEBUG httpcore.connection: close.complete
+2025-07-27 02:34:21,754 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 02:34:22,042 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 02:34:22,046 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 02:34:22,076 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B581490>
+2025-07-27 02:34:22,076 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B5729D0> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 02:34:22,134 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5C3020>
+2025-07-27 02:34:22,135 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 02:34:22,136 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 02:34:22,136 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 02:34:22,136 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 02:34:22,136 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 02:34:34,437 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:04:34 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 02:34:34,437 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 02:34:34,438 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 02:34:34,439 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 02:34:34,440 DEBUG httpcore.http11: response_closed.started
+2025-07-27 02:34:34,440 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 02:34:34,580 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+ஆறாம் வகுப்பு படிக்கும் அமுதாவுக்கு அவளுடைய பால்கனியில் இருந்த செடிகள் என்றால் உயிர். அதிலும் குறிப்பாக, அவள் ஆசையாக வளர்த்த தக்காளிச் செடி ஒன்று மட்டும் சரியாக வளரவே இல்லை. அதன் இலைகள் மஞ்சள் நிறத்தில் சோகையாக இருந்தன.
+
+"ஏன் இந்தச் செடி மட்டும் இப்படி இருக்கிறது?" என்று அமுதா யோசித்தாள். அவள் நன்றாக உற்றுப் பார்த்தாள். மற்ற செடிகள் எல்லாம் நன்றாக சூரிய ஒளி படும் இடத்தில் இருந்தன. ஆனால் இந்தத் தக்காளிச் செடி மட்டும் சற்று நிழலான இடத்தில் இருந்தது.
+
+உடனே அவளுக்கு ஒரு எண்ணம் தோன்றியது. "ஒருவேளை இந்தச் செடிக்கு போதுமான சூரிய ஒளி கிடைக்கவில்லையோ?" இதுதான் அவளுடைய சந்தேகம்.
+
+இதைச் சோதித்துப் பார்க்க முடிவு செய்தாள். அந்தத் தக்காளிச் செடியை எடுத்து பால்கனியில் நன்கு வெயில் படும் இடத்தில் வைத்தாள். மற்ற செடிகளுக்கு ஊற்றுவது போலவே அதற்கும் தினமும் தண்ணீர் ஊற்றினாள்.
+
+ஒரு வாரம் கழித்துப் பார்த்தபோது, அமுதாவிற்கு ஒரே ஆச்சரியம்! அந்தச் செடியில் புதிய பச்சை இலைகள் துளிர்க்க ஆரம்பித்திருந்தன. செடி இப்போது முன்பை விட மிகவும் ஆரோக்கியமாக இருந்தது.
+
+தன் சந்தேகம் சரியானதுதான் என்பதை அவள் புரிந்து கொண்டாள். உற்று நோக்குதல், சந்தேகம் கொள்ளுதல், சோதித்துப் பார்த்தல் ஆகியவற்றின் மூலம் ஒரு பிரச்சனைக்கு தீர்வு காண முடியும் என்பதை அவள் கற்றுக் கொண்டாள். இதுதான் அறிவியலின் அடிப்படை என்பதை உணர்ந்து அவள் மிகவும் மகிழ்ச்சி அடைந்தாள்.
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:04:34 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"ஆறாம் வகுப்பு படிக்கும் அமுதாவுக்கு அவளுடைய பால்கனியில் இருந்த செடிகள் என்றால் உயிர். அதிலும் குறிப்பாக, அவள் ஆசையாக வளர்த்த தக்காளிச் செடி ஒன்று மட்டும் சரியாக வளரவே இல்லை. அதன் இலைகள் மஞ்சள் நிறத்தில் சோகையாக இருந்தன.\n\n\"ஏன் இந்தச் செடி மட்டும் இப்படி இருக்கிறது?\" என்று அமுதா யோசித்தாள். அவள் நன்றாக உற்றுப் பார்த்தாள். மற்ற செடிகள் எல்லாம் நன்றாக சூரிய ஒளி படும் இடத்தில் இருந்தன. ஆனால் இந்தத் தக்காளிச் செடி மட்டும் சற்று நிழலான இடத்தில் இருந்தது.\n\nஉடனே அவளுக்கு ஒரு எண்ணம் தோன்றியது. \"ஒருவேளை இந்தச் செடிக்கு போதுமான சூரிய ஒளி கிடைக்கவில்லையோ?\" இதுதான் அவளுடைய சந்தேகம்.\n\nஇதைச் சோதித்துப் பார்க்க முடிவு செய்தாள். அந்தத் தக்காளிச் செடியை எடுத்து பால்கனியில் நன்கு வெயில் படும் இடத்தில் வைத்தாள். மற்ற செடிகளுக்கு ஊற்றுவது போலவே அதற்கும் தினமும் தண்ணீர் ஊற்றினாள்.\n\nஒரு வாரம் கழித்துப் பார்த்தபோது, அமுதாவிற்கு ஒரே ஆச்சரியம்! அந்தச் செடியில் புதிய பச்சை இலைகள் துளிர்க்க ஆரம்பித்திருந்தன. செடி இப்போது முன்பை விட மிகவும் ஆரோக்கியமாக இருந்தது.\n\nதன் சந்தேகம் சரியானதுதான் என்பதை அவள் புரிந்து கொண்டாள். உற்று நோக்குதல், சந்தேகம் கொள்ளுதல், சோதித்துப் பார்த்தல் ஆகியவற்றின் மூலம் ஒரு பிரச்சனைக்கு தீர்வு காண முடியும் என்பதை அவள் கற்றுக் கொண்டாள். இதுதான் அறிவியலின் அடிப்படை என்பதை உணர்ந்து அவள் மிகவும் மகிழ்ச்சி அடைந்தாள்."}],"role":"model"},"finish_reason":"STOP","grounding_metadata":{"retrieval_metadata":{},"search_entry_point":{"rendered_content":"<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaVCz-wAukS7av-2pktKc2GDIukYDRUfWQ4UY16cb8x_dBWWQg34QcUKV6F2uAoVlrivhVAkchdDK9uF9iU3MT2vpFAggFLkzuPhHAaCXZUcAaMSmPelzS_g75gnQi-YlOrLAvRZlBgnbx_v8npHOwj-0sD7D32VsnPBkznKYVxkhXqidhQdwFPzO4iOzx5tBb5CCkG4aVco_t_lwwvZ23gsR2TK5cj1Fpt_lXUv0N4FtL5L5EjbPOBrro5EUP4Tf8n8DYVWPIKX6nlrAhzNV8f9zjd9fp1dqszNzyYggPSGlBH8w9N3_Ul7jNYjurOiWsnim1OEBcXLaHgIIlEbEjTlU9Arw2rvRi0TTjoGdZqj3WflQn0cxVK7KmbwpPsuez6w-9YbuJ5WD6L3RzOIj0JowdkBnAtVsPBAmhhvj5a6oBbFahqGEqBpyAQkG-qvl-xVc3EHhhotRdKH5Qz2Xbb-ku0hE3lb9c4KPFJf3I94vN2OLEoSDA-aHKUVcznM7FA2ylJiQ8lNBl82fe9Gz1jmrz0QKnLq07_zfIN5C1AkLw4REKpMo9t8WqSdp0xzEwQ-CwvVXQTWbCZF67T3JstE-SJ5mzfyeOt__GEHVSlQP-45HSYFchGUqOHDHDQmQpTPF4ZF5JQUo04XuS0vH6jXhyYfNRub2g\">ஆறாம் வகுப்பு மாணவர்களுக்கான அறிவியல் புனைகதை</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGAU173V9YIbzIirggsY0BjdIv0i1dq_uUSVIal2bBGmbX-3FfQJywPs3PIBCbLmCBKSwaITx65NV-Z_QxFwUm5bIx6mK1pXYtR-TZufeWj_NC5-UC5lFly8asyo8xpo6vToiJ3WCQlSrlamvXxKS1aCVbnGN6qNlyFcObOGWdpNwitRIqnceP9DoWMkCoa1LoqKDvBXZ6x63xvbulF9UZxwtKO8gX9u6IH1KrPiazGOd2TBH6-9xBBg1izy6RpSoIRaBX7hdMiRm6JghdOZj91C9fCtLeZxLG4WP3VqesAEgykALfxdamy3sn9sw3TW8oS8uH5athqjfjqIt5PR7_-v6z9VcYj7yMYva1mcZAOgXYgl-GGnXYaPI8xHU-isb_K0T2cHzwYWD8l8WCJGnIm4Iitr7lS_GASCNqPYdVw9y7CgOVANPdL1AID9NL9hpkdcIvt3NS9XoLtEPKILUP3WcSMT60Bn4cfhvfkYAxUWQ49utXOH8pFtdH1rdnHdJM9_I64ayCNcTPf6yw2bSw1105_1jYoXcOZqcqRglpmja8HFOjeZiAbpITEIF_gVI=\">சிறுவர்களுக்கான எளிய அறிவியல் கதைகள்</a>\n  </div>\n</div>\n"},"web_search_queries":["ஆறாம் வகுப்பு மாணவர்களுக்கான அறிவியல் புனைகதை","சிறுவர்களுக்கான எளிய அறிவியல் கதைகள்"]}}],"create_time":"2025-07-26T21:04:24.215489Z","response_id":"2EKFaMGTDcOrmecPsain0A0","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":540,"candidates_tokens_details":[{"modality":"TEXT","token_count":540}],"prompt_token_count":118,"prompt_tokens_details":[{"modality":"TEXT","token_count":118}],"thoughts_token_count":506,"tool_use_prompt_token_count":504,"total_token_count":1164,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 02:34:34,605 DEBUG app.routers.agents: 🔸 chunk from story_agent: 'ஆறாம் வகுப்பு படிக்கும் அமுதாவுக்கு அவளுடைய பால்கனியில் இருந்த செடிகள் என்றால் உயிர். அதிலும் குறிப்பாக, அவள் ஆசையாக வளர்த்த தக்காளிச் செடி ஒன்று மட்டும் சரியாக வளரவே இல்லை. அதன் இலைகள் மஞ்சள் நிறத்தில் சோகையாக இருந்தன.\n\n"ஏன் இந்தச் செடி மட்டும் இப்படி இருக்கிறது?" என்று அமுதா யோசித்தாள். அவள் நன்றாக உற்றுப் பார்த்தாள். மற்ற செடிகள் எல்லாம் நன்றாக சூரிய ஒளி படும் இடத்தில் இருந்தன. ஆனால் இந்தத் தக்காளிச் செடி மட்டும் சற்று நிழலான இடத்தில் இருந்தது.\n\nஉடனே அவளுக்கு ஒரு எண்ணம் தோன்றியது. "ஒருவேளை இந்தச் செடிக்கு போதுமான சூரிய ஒளி கிடைக்கவில்லையோ?" இதுதான் அவளுடைய சந்தேகம்.\n\nஇதைச் சோதித்துப் பார்க்க முடிவு செய்தாள். அந்தத் தக்காளிச் செடியை எடுத்து பால்கனியில் நன்கு வெயில் படும் இடத்தில் வைத்தாள். மற்ற செடிகளுக்கு ஊற்றுவது போலவே அதற்கும் தினமும் தண்ணீர் ஊற்றினாள்.\n\nஒரு வாரம் கழித்துப் பார்த்தபோது, அமுதாவிற்கு ஒரே ஆச்சரியம்! அந்தச் செடியில் புதிய பச்சை இலைகள் துளிர்க்க ஆரம்பித்திருந்தன. செடி இப்போது முன்பை விட மிகவும் ஆரோக்கியமாக இருந்தது.\n\nதன் சந்தேகம் சரியானதுதான் என்பதை அவள் புரிந்து கொண்டாள். உற்று நோக்குதல், சந்தேகம் கொள்ளுதல், சோதித்துப் பார்த்தல் ஆகியவற்றின் மூலம் ஒரு பிரச்சனைக்கு தீர்வு காண முடியும் என்பதை அவள் கற்றுக் கொண்டாள். இதுதான் அறிவியலின் அடிப்படை என்பதை உணர்ந்து அவள் மிகவும் மகிழ்ச்சி அடைந்தாள்.'
+2025-07-27 02:34:34,608 DEBUG app.routers.agents: ✅ final reply: 'ஆறாம் வகுப்பு படிக்கும் அமுதாவுக்கு அவளுடைய பால்கனியில் இருந்த செடிகள் என்றால் உயிர். அதிலும் குறிப்பாக, அவள் ஆசையாக வளர்த்த தக்காளிச் செடி ஒன்று மட்டும் சரியாக வளரவே இல்லை. அதன் இலைகள் மஞ்சள் நிறத்தில் சோகையாக இருந்தன.\n\n"ஏன் இந்தச் செடி மட்டும் இப்படி இருக்கிறது?" என்று அமுதா யோசித்தாள். அவள் நன்றாக உற்றுப் பார்த்தாள். மற்ற செடிகள் எல்லாம் நன்றாக சூரிய ஒளி படும் இடத்தில் இருந்தன. ஆனால் இந்தத் தக்காளிச் செடி மட்டும் சற்று நிழலான இடத்தில் இருந்தது.\n\nஉடனே அவளுக்கு ஒரு எண்ணம் தோன்றியது. "ஒருவேளை இந்தச் செடிக்கு போதுமான சூரிய ஒளி கிடைக்கவில்லையோ?" இதுதான் அவளுடைய சந்தேகம்.\n\nஇதைச் சோதித்துப் பார்க்க முடிவு செய்தாள். அந்தத் தக்காளிச் செடியை எடுத்து பால்கனியில் நன்கு வெயில் படும் இடத்தில் வைத்தாள். மற்ற செடிகளுக்கு ஊற்றுவது போலவே அதற்கும் தினமும் தண்ணீர் ஊற்றினாள்.\n\nஒரு வாரம் கழித்துப் பார்த்தபோது, அமுதாவிற்கு ஒரே ஆச்சரியம்! அந்தச் செடியில் புதிய பச்சை இலைகள் துளிர்க்க ஆரம்பித்திருந்தன. செடி இப்போது முன்பை விட மிகவும் ஆரோக்கியமாக இருந்தது.\n\nதன் சந்தேகம் சரியானதுதான் என்பதை அவள் புரிந்து கொண்டாள். உற்று நோக்குதல், சந்தேகம் கொள்ளுதல், சோதித்துப் பார்த்தல் ஆகியவற்றின் மூலம் ஒரு பிரச்சனைக்கு தீர்வு காண முடியும் என்பதை அவள் கற்றுக் கொண்டாள். இதுதான் அறிவியலின் அடிப்படை என்பதை உணர்ந்து அவள் மிகவும் மகிழ்ச்சி அடைந்தாள்.'
+2025-07-27 02:34:35,049 DEBUG httpcore.connection: close.started
+2025-07-27 02:34:35,050 DEBUG httpcore.connection: close.complete
+2025-07-27 03:07:27,210 DEBUG app.routers.agents: 🔍 Loaded history for 4a89a21a-2d5e-4514-b465-bafe402783a0: [{'sender': 'user', 'text': 'Hi'}]
+2025-07-27 03:07:33,326 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:07:33,712 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+You receive a single teacher prompt. Parse it into JSON with these keys:
+{
+  "intent":"<one of: chat,explanation, story, quiz, lesson_plan, game, reflect>",
+  "slots":{
+    "grades":[ints],      // e.g. [5,6]
+    "language":"<string>",// e.g. "English" if not specified explicitly
+    "topic":"<string>",  
+    "date":"YYYY-MM-DD"   // current date if not specified, or calculate date if specified as 'yesterday', 'tomorrow', etc.
+  }
+}
+Chat: Simple chat for interacting with common user questions
+Explanation: Any explicit questions or explanation about something specific
+Story: Any story or narrative that the teacher wants to share or ask for.
+Quiz: Any quiz or question-answer format that the teacher wants to create.  
+Lesson Plan: Any lesson plan or structured teaching plan that the teacher wants to create.
+Game: Any game or interactive activity that the teacher wants to create.
+Reflect: Any reflection or feedback that the teacher wants about their teaching , to improve.
+Only output the JSON object, no extra text.
+
+
+You are an agent. Your internal name is "intent_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:07:33,713 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:07:34,631 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:07:34,891 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:07:34,935 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:07:34,979 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5F7B90>
+2025-07-27 03:07:34,979 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B52B850> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 03:07:35,085 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5F7A70>
+2025-07-27 03:07:35,086 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 03:07:35,086 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 03:07:35,086 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 03:07:35,087 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 03:07:35,087 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 03:07:41,003 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:37:41 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 03:07:41,007 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 03:07:41,008 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 03:07:41,013 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 03:07:41,014 DEBUG httpcore.http11: response_closed.started
+2025-07-27 03:07:41,014 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 03:07:41,185 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "intent": "chat",
+  "slots": {
+    "grades": [],
+    "language": "English",
+    "topic": "",
+    "date": "2024-05-07"
+  }
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:37:41 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"intent\": \"chat\",\n  \"slots\": {\n    \"grades\": [],\n    \"language\": \"English\",\n    \"topic\": \"\",\n    \"date\": \"2024-05-07\"\n  }\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.9776558414582284}],"create_time":"2025-07-26T21:37:37.133931Z","response_id":"oUqFaKuWCIGThMIPupig4Ac","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":62,"candidates_tokens_details":[{"modality":"TEXT","token_count":62}],"prompt_token_count":268,"prompt_tokens_details":[{"modality":"TEXT","token_count":268}],"thoughts_token_count":369,"total_token_count":699,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 03:07:41,280 DEBUG app.routers.agents: 🔍 Raw intent output: '```json\n{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": "",\n    "date": "2024-05-07"\n  }\n}\n```'
+2025-07-27 03:07:41,280 DEBUG app.routers.agents: 🔍 Cleaned intent JSON: '{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": "",\n    "date": "2024-05-07"\n  }\n}'
+2025-07-27 03:07:42,337 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:07:42,337 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+Inputs in context.state:
+- history: list of {sender,text}
+
+TASK:
+You are a conversational teaching assistant.  The teacher may ask follow-up or clarification
+questions based on prior exchange.  Use only the previous messages in history to answer naturally.
+Write a helpful, concise reply.  Output only the reply text.
+
+
+You are an agent. Your internal name is "chat_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:07:42,338 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:07:42,342 DEBUG httpcore.connection: close.started
+2025-07-27 03:07:42,415 DEBUG httpcore.connection: close.complete
+2025-07-27 03:07:42,504 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:07:42,719 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:07:42,721 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:07:42,754 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B580350>
+2025-07-27 03:07:42,755 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B52B7D0> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 03:07:42,817 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5807D0>
+2025-07-27 03:07:42,817 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 03:07:42,818 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 03:07:42,819 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 03:07:42,819 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 03:07:42,819 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 03:07:45,461 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:37:45 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 03:07:45,462 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 03:07:45,463 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 03:07:45,471 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 03:07:45,471 DEBUG httpcore.http11: response_closed.started
+2025-07-27 03:07:45,472 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 03:07:45,475 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Hello! How can I help you today?
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:37:45 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Hello! How can I help you today?"}],"role":"model"},"finish_reason":"STOP","grounding_metadata":{}}],"create_time":"2025-07-26T21:37:44.833482Z","response_id":"qEqFaMrvMrqYhMIP4Zu7yAE","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":9,"candidates_tokens_details":[{"modality":"TEXT","token_count":9}],"prompt_token_count":89,"prompt_tokens_details":[{"modality":"TEXT","token_count":89}],"thoughts_token_count":42,"total_token_count":140,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 03:07:45,476 DEBUG app.routers.agents: 🔸 chunk from chat_agent: 'Hello! How can I help you today?'
+2025-07-27 03:07:45,481 DEBUG app.routers.agents: ✅ final reply: 'Hello! How can I help you today?'
+2025-07-27 03:07:46,406 DEBUG httpcore.connection: close.started
+2025-07-27 03:07:46,407 DEBUG httpcore.connection: close.complete
+2025-07-27 03:08:13,164 DEBUG app.routers.agents: 🔍 Loaded history for e589d8e0-bc86-45f6-a82f-8792fa8697b9: [{'sender': 'user', 'text': 'hello'}]
+2025-07-27 03:08:14,236 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:08:14,237 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+You receive a single teacher prompt. Parse it into JSON with these keys:
+{
+  "intent":"<one of: chat,explanation, story, quiz, lesson_plan, game, reflect>",
+  "slots":{
+    "grades":[ints],      // e.g. [5,6]
+    "language":"<string>",// e.g. "English" if not specified explicitly
+    "topic":"<string>",  
+    "date":"YYYY-MM-DD"   // current date if not specified, or calculate date if specified as 'yesterday', 'tomorrow', etc.
+  }
+}
+Chat: Simple chat for interacting with common user questions
+Explanation: Any explicit questions or explanation about something specific
+Story: Any story or narrative that the teacher wants to share or ask for.
+Quiz: Any quiz or question-answer format that the teacher wants to create.  
+Lesson Plan: Any lesson plan or structured teaching plan that the teacher wants to create.
+Game: Any game or interactive activity that the teacher wants to create.
+Reflect: Any reflection or feedback that the teacher wants about their teaching , to improve.
+Only output the JSON object, no extra text.
+
+
+You are an agent. Your internal name is "intent_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"hello"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:08:14,237 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:08:14,306 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:08:14,494 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:08:14,536 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:08:14,578 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5F7050>
+2025-07-27 03:08:14,578 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B487AD0> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 03:08:14,639 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5F5AF0>
+2025-07-27 03:08:14,640 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 03:08:14,640 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 03:08:14,640 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 03:08:14,640 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 03:08:14,640 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 03:08:18,019 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:38:18 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 03:08:18,020 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 03:08:18,020 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 03:08:18,030 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 03:08:18,030 DEBUG httpcore.http11: response_closed.started
+2025-07-27 03:08:18,030 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 03:08:18,302 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "intent": "chat",
+  "slots": {
+    "grades": [],
+    "language": "English",
+    "topic": null,
+    "date": "2024-05-13"
+  }
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:38:18 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"intent\": \"chat\",\n  \"slots\": {\n    \"grades\": [],\n    \"language\": \"English\",\n    \"topic\": null,\n    \"date\": \"2024-05-13\"\n  }\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-0.4564008561391679}],"create_time":"2025-07-26T21:38:16.671561Z","response_id":"yEqFaMn-KJLfhMIPuPmNkAM","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":63,"candidates_tokens_details":[{"modality":"TEXT","token_count":63}],"prompt_token_count":268,"prompt_tokens_details":[{"modality":"TEXT","token_count":268}],"thoughts_token_count":58,"total_token_count":389,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 03:08:18,304 DEBUG app.routers.agents: 🔍 Raw intent output: '```json\n{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": null,\n    "date": "2024-05-13"\n  }\n}\n```'
+2025-07-27 03:08:18,304 DEBUG app.routers.agents: 🔍 Cleaned intent JSON: '{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": null,\n    "date": "2024-05-13"\n  }\n}'
+2025-07-27 03:08:20,387 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:08:20,388 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+Inputs in context.state:
+- history: list of {sender,text}
+
+TASK:
+You are a conversational teaching assistant.  The teacher may ask follow-up or clarification
+questions based on prior exchange.  Use only the previous messages in history to answer naturally.
+Write a helpful, concise reply.  Output only the reply text.
+
+
+You are an agent. Your internal name is "chat_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"hello"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:08:20,388 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:08:20,391 DEBUG httpcore.connection: close.started
+2025-07-27 03:08:20,392 DEBUG httpcore.connection: close.complete
+2025-07-27 03:08:20,485 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:08:20,674 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:08:20,682 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:08:20,719 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5C2F90>
+2025-07-27 03:08:20,719 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B570150> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 03:08:20,789 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679B5C3380>
+2025-07-27 03:08:20,790 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 03:08:20,791 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 03:08:20,791 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 03:08:20,792 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 03:08:20,793 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 03:08:23,382 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:38:23 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 03:08:23,383 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 03:08:23,383 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 03:08:23,391 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 03:08:23,392 DEBUG httpcore.http11: response_closed.started
+2025-07-27 03:08:23,392 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 03:08:23,394 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Hello! How can I help you today?
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:38:23 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Hello! How can I help you today?"}],"role":"model"},"finish_reason":"STOP","grounding_metadata":{}}],"create_time":"2025-07-26T21:38:22.822945Z","response_id":"zkqFaKGdMpmWsbQPmZzU-QE","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":9,"candidates_tokens_details":[{"modality":"TEXT","token_count":9}],"prompt_token_count":89,"prompt_tokens_details":[{"modality":"TEXT","token_count":89}],"thoughts_token_count":37,"total_token_count":135,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 03:08:23,394 DEBUG app.routers.agents: 🔸 chunk from chat_agent: 'Hello! How can I help you today?'
+2025-07-27 03:08:23,397 DEBUG app.routers.agents: ✅ final reply: 'Hello! How can I help you today?'
+2025-07-27 03:08:23,778 DEBUG httpcore.connection: close.started
+2025-07-27 03:08:23,778 DEBUG httpcore.connection: close.complete
+2025-07-27 03:14:42,865 DEBUG app.routers.agents: 🔍 Loaded history for 2ee889b7-b91e-49b6-a5b0-aa8c51bfe875: [{'sender': 'user', 'text': 'Hi'}]
+2025-07-27 03:14:44,221 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:14:44,221 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+You receive a single teacher prompt. Parse it into JSON with these keys:
+{
+  "intent":"<one of: chat,explanation, story, quiz, lesson_plan, game, reflect>",
+  "slots":{
+    "grades":[ints],      // e.g. [5,6]
+    "language":"<string>",// e.g. "English" if not specified explicitly
+    "topic":"<string>",  
+    "date":"YYYY-MM-DD"   // current date if not specified, or calculate date if specified as 'yesterday', 'tomorrow', etc.
+  }
+}
+Chat: Simple chat for interacting with common user questions
+Explanation: Any explicit questions or explanation about something specific
+Story: Any story or narrative that the teacher wants to share or ask for.
+Quiz: Any quiz or question-answer format that the teacher wants to create.  
+Lesson Plan: Any lesson plan or structured teaching plan that the teacher wants to create.
+Game: Any game or interactive activity that the teacher wants to create.
+Reflect: Any reflection or feedback that the teacher wants about their teaching , to improve.
+Only output the JSON object, no extra text.
+
+
+You are an agent. Your internal name is "intent_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:14:44,221 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:14:44,309 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:14:45,971 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:14:45,983 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:15:19,196 DEBUG httpcore.connection: connect_tcp.failed exception=ConnectError(OSError('All connection attempts failed'))
+2025-07-27 03:16:09,467 DEBUG app.routers.agents: 🔍 Loaded history for 77c1b72e-cbe0-461e-998b-026c88f7d952: [{'sender': 'user', 'text': 'Hi'}]
+2025-07-27 03:16:10,319 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:16:10,319 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+You receive a single teacher prompt. Parse it into JSON with these keys:
+{
+  "intent":"<one of: chat,explanation, story, quiz, lesson_plan, game, reflect>",
+  "slots":{
+    "grades":[ints],      // e.g. [5,6]
+    "language":"<string>",// e.g. "English" if not specified explicitly
+    "topic":"<string>",  
+    "date":"YYYY-MM-DD"   // current date if not specified, or calculate date if specified as 'yesterday', 'tomorrow', etc.
+  }
+}
+Chat: Simple chat for interacting with common user questions
+Explanation: Any explicit questions or explanation about something specific
+Story: Any story or narrative that the teacher wants to share or ask for.
+Quiz: Any quiz or question-answer format that the teacher wants to create.  
+Lesson Plan: Any lesson plan or structured teaching plan that the teacher wants to create.
+Game: Any game or interactive activity that the teacher wants to create.
+Reflect: Any reflection or feedback that the teacher wants about their teaching , to improve.
+Only output the JSON object, no extra text.
+
+
+You are an agent. Your internal name is "intent_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:16:10,320 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:16:10,412 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:16:12,019 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:16:12,023 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:16:12,122 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679C76B0B0>
+2025-07-27 03:16:12,122 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679C7DEBD0> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 03:16:12,960 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679C76AF00>
+2025-07-27 03:16:12,961 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 03:16:12,961 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 03:16:12,961 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 03:16:12,961 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 03:16:12,961 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 03:16:20,522 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:46:20 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 03:16:20,523 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 03:16:20,523 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 03:16:20,524 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 03:16:20,524 DEBUG httpcore.http11: response_closed.started
+2025-07-27 03:16:20,524 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 03:16:20,526 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+```json
+{
+  "intent": "chat",
+  "slots": {
+    "grades": [],
+    "language": "English",
+    "topic": "",
+    "date": "2024-05-24"
+  }
+}
+```
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:46:20 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"```json\n{\n  \"intent\": \"chat\",\n  \"slots\": {\n    \"grades\": [],\n    \"language\": \"English\",\n    \"topic\": \"\",\n    \"date\": \"2024-05-24\"\n  }\n}\n```"}],"role":"model"},"finish_reason":"STOP","avg_logprobs":-1.2856276727491809}],"create_time":"2025-07-26T21:46:15.150777Z","response_id":"p0yFaPmZCaCp1dkP06DeoQM","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":62,"candidates_tokens_details":[{"modality":"TEXT","token_count":62}],"prompt_token_count":268,"prompt_tokens_details":[{"modality":"TEXT","token_count":268}],"thoughts_token_count":525,"total_token_count":855,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 03:16:20,529 DEBUG app.routers.agents: 🔍 Raw intent output: '```json\n{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": "",\n    "date": "2024-05-24"\n  }\n}\n```'
+2025-07-27 03:16:20,529 DEBUG app.routers.agents: 🔍 Cleaned intent JSON: '{\n  "intent": "chat",\n  "slots": {\n    "grades": [],\n    "language": "English",\n    "topic": "",\n    "date": "2024-05-24"\n  }\n}'
+2025-07-27 03:16:21,259 INFO google_adk.google.adk.models.google_llm: Sending out request, model: gemini-2.5-pro, backend: vertex, stream: False
+2025-07-27 03:16:21,259 INFO google_adk.google.adk.models.google_llm: 
+LLM Request:
+-----------------------------------------------------------
+System Instruction:
+
+Inputs in context.state:
+- history: list of {sender,text}
+
+TASK:
+You are a conversational teaching assistant.  The teacher may ask follow-up or clarification
+questions based on prior exchange.  Use only the previous messages in history to answer naturally.
+Write a helpful, concise reply.  Output only the reply text.
+
+
+You are an agent. Your internal name is "chat_agent".
+-----------------------------------------------------------
+Contents:
+{"parts":[{"text":"Hi"}],"role":"user"}
+-----------------------------------------------------------
+Functions:
+
+-----------------------------------------------------------
+
+2025-07-27 03:16:21,281 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-07-27 03:16:21,283 DEBUG httpcore.connection: close.started
+2025-07-27 03:16:21,283 DEBUG httpcore.connection: close.complete
+2025-07-27 03:16:21,333 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-07-27 03:16:22,578 DEBUG urllib3.connectionpool: https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-07-27 03:16:22,587 DEBUG httpcore.connection: connect_tcp.started host='us-central1-aiplatform.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-07-27 03:16:22,675 DEBUG httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679C801070>
+2025-07-27 03:16:22,675 DEBUG httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002679B4EA4D0> server_hostname='us-central1-aiplatform.googleapis.com' timeout=None
+2025-07-27 03:16:23,039 DEBUG httpcore.connection: start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002679C800D70>
+2025-07-27 03:16:23,039 DEBUG httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-07-27 03:16:23,039 DEBUG httpcore.http11: send_request_headers.complete
+2025-07-27 03:16:23,039 DEBUG httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-07-27 03:16:23,039 DEBUG httpcore.http11: send_request_body.complete
+2025-07-27 03:16:23,039 DEBUG httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-07-27 03:16:25,939 DEBUG httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sat, 26 Jul 2025 21:46:26 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-07-27 03:16:25,940 INFO httpx: HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/stoked-woods-466617-t7/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2025-07-27 03:16:25,940 DEBUG httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-07-27 03:16:25,940 DEBUG httpcore.http11: receive_response_body.complete
+2025-07-27 03:16:25,940 DEBUG httpcore.http11: response_closed.started
+2025-07-27 03:16:25,940 DEBUG httpcore.http11: response_closed.complete
+2025-07-27 03:16:25,941 INFO google_adk.google.adk.models.google_llm: 
+LLM Response:
+-----------------------------------------------------------
+Text:
+Hello! How can I help you today?
+-----------------------------------------------------------
+Function calls:
+
+-----------------------------------------------------------
+Raw response:
+{"sdk_http_response":{"headers":{"content-type":"application/json; charset=UTF-8","vary":"Origin, X-Origin, Referer","content-encoding":"gzip","date":"Sat, 26 Jul 2025 21:46:26 GMT","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","transfer-encoding":"chunked"}},"candidates":[{"content":{"parts":[{"text":"Hello! How can I help you today?"}],"role":"model"},"finish_reason":"STOP","grounding_metadata":{}}],"create_time":"2025-07-26T21:46:25.262338Z","response_id":"sUyFaMKBEICn1dkPnfGKsAE","model_version":"gemini-2.5-pro","usage_metadata":{"candidates_token_count":9,"candidates_tokens_details":[{"modality":"TEXT","token_count":9}],"prompt_token_count":89,"prompt_tokens_details":[{"modality":"TEXT","token_count":89}],"thoughts_token_count":35,"total_token_count":133,"traffic_type":"ON_DEMAND"},"automatic_function_calling_history":[]}
+-----------------------------------------------------------
+
+2025-07-27 03:16:25,942 DEBUG app.routers.agents: 🔸 chunk from chat_agent: 'Hello! How can I help you today?'
+2025-07-27 03:16:25,943 DEBUG app.routers.agents: ✅ final reply: 'Hello! How can I help you today?'
+2025-07-27 03:16:26,350 DEBUG httpcore.connection: close.started
+2025-07-27 03:16:26,351 DEBUG httpcore.connection: close.complete
+2025-07-27 04:31:04,447 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:31:04,548 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_data with data[443:32768]
+2025-07-27 04:31:04,565 DEBUG python_multipart.multipart: Calling on_part_data with data[0:32768]
+2025-07-27 04:31:04,582 DEBUG python_multipart.multipart: Calling on_part_data with data[0:16384]
+2025-07-27 04:31:04,582 DEBUG python_multipart.multipart: Calling on_part_data with data[0:32768]
+2025-07-27 04:31:04,595 DEBUG python_multipart.multipart: Calling on_part_data with data[0:16384]
+2025-07-27 04:31:04,697 DEBUG python_multipart.multipart: Calling on_part_data with data[0:16384]
+2025-07-27 04:31:04,794 DEBUG python_multipart.multipart: Calling on_part_data with data[0:908]
+2025-07-27 04:31:04,794 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:31:04,794 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 04:31:06,764 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages         : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade         : 5
+  subject       : "English"
+  num_questions : 5
+
+TASK:
+  • From 'pages', create three worksheets:
+      1) remedial
+      2) core
+      3) enrichment
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object with key 'worksheets'.
+
+RULES:
+  • Use ONLY the content in 'pages'.
+  • Output *only* the JSON—no markdown, no code fences.
+
+2025-07-27 04:31:29,665 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": {\n    "remedial": {\n      "questions": [\n        {\n          "question": "What is Radha\'s favourite activity?",\n          "answer": "Radha\'s favourite activity is climbing trees."\n        },\n        {\n          "question": "What kind of tree is outside Radha\'s house?",\n          "answer": "There is a mango tree outside her house."\n        },\n        {\n          "question": "Fill in the blank: Radha\'s mother tells her it is not sensible for ______ to climb trees.",\n          "answer": "girls"\n        },\n        {\n          "question": "True or False: Radha\'s mother never climbed the tree.",\n          "answer": "False. One afternoon, she climbed up the tree too."\n        },\n        {\n          "question": "What did Radha and her mother eat in the tree?",\n          "answer": "They ate raw mangoes."\n        }\n      ]\n    },\n    "core": {\n      "questions": [\n        {\n          "question": "Why is it easy for Radha to climb the mango tree?",\n          "answer": "It is easy to climb because its branches spread out, and she can sit comfortably in the fork of two branches."\n        },\n        {\n          "question": "What was Radha\'s mother\'s initial opinion about her climbing trees?",\n          "answer": "Her mother initially thought that it was not sensible for girls to climb trees."\n        },\n        {\n          "question": "According to the introduction, in what ways are all people different?",\n          "answer": "The introduction says we are all interesting people in different ways and we are all good at different things."\n        },\n        {\n          "question": "Describe what Radha and her mother did together in the tree one afternoon.",\n          "answer": "One afternoon, Radha and her mother both sat in the tree talking and eating raw mangoes."\n        },\n        {\n          "question": "How does Radha feel when she is high up in the tree?",\n          "answer": "When she is high up in the tree, she feels like she can rule the whole world."\n        }\n      ]\n    },\n    "enrichment": {\n      "questions": [\n        {\n          "question": "What action shows that Radha\'s mother changed her mind about girls climbing trees?",\n          "answer": "Her mother climbing the tree with her one afternoon shows she changed her mind."\n        },\n        {\n          "question": "The introduction asks the reader to think about what they enjoy doing. How does Radha\'s story encourage the reader to value their own interests?",\n          "answer": "Radha\'s story shows her getting great joy and a feeling of power from her unique interest, which encourages the reader to also value what they enjoy, even if it\'s different."\n        },\n        {\n          "question": "Why might Radha feel like she can \'rule the whole world\' from the tree?",\n          "answer": "Being high up in the tree gives her a new perspective, a sense of freedom, and power, making her feel like she is on top of everything."\n        },\n        {\n          "question": "What does the shared experience of eating raw mangoes in the tree suggest about Radha\'s relationship with her mother?",\n          "answer": "It suggests they have a close relationship where her mother is willing to understand and share in the things that are important to Radha."\n        },\n        {\n          "question": "The text says we are all \'good at different things\'. What is Radha good at, and what does this skill allow her to experience?",\n          "answer": "Radha is good at climbing trees. This skill allows her to experience a feeling of comfort, joy, and a sense of power, as well as a special moment with her mother."\n        }\n      ]\n    }\n  }\n}\n```'
+2025-07-27 04:42:30,670 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_data with data[443:65536]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_data with data[0:82828]
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:42:30,687 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 04:42:32,159 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 04:42:56,787 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is outside Radha\'s house?",\n        "Who tells Radha it is not sensible for girls to climb trees?",\n        "What did Radha and her mother eat in the tree?",\n        "Is it simple or difficult for Radha to climb the tree?"\n      ],\n      "answers": [\n        "Radha\'s favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "Her mother tells her it is not sensible for girls to climb trees.",\n        "They ate raw mangoes.",\n        "The text says it is simple to climb the tree."\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it simple for Radha to climb the mango tree?",\n        "Where does Radha sit comfortably when she is in the tree?",\n        "What did Radha\'s mother do one afternoon that was different from what she usually says?",\n        "How does Radha feel when she is high up in the tree?",\n        "What two activities did Radha and her mother do together in the tree?"\n      ],\n      "answers": [\n        "It is simple to climb because its branches spread out.",\n        "She sits comfortably in the fork of two branches.",\n        "One afternoon, her mother climbed up the tree too.",\n        "She feels like she can rule the whole world.",\n        "They sat there talking and eating raw mangoes."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "The introduction says we are all \\"good at different things.\\" What is the one thing this text tells us Radha is good at?",\n        "How does Radha\'s mother\'s action of climbing the tree contradict her words?",\n        "What does the phrase \\"I feel like I can rule the whole world\\" suggest about Radha\'s feelings when she\'s in the tree?",\n        "The story is in a section called \\"MANY VOICES\\". According to the introduction, what is the purpose of sharing a story like Radha\'s?",\n        "What evidence is in the text to show that Radha\'s mother changed her mind about climbing trees?"\n      ],\n      "answers": [\n        "The text tells us that Radha is good at climbing trees.",\n        "Her mother says it is not sensible for girls to climb trees, but then she climbs the tree herself.",\n        "It suggests that being high up in the tree makes her feel powerful, free, and important.",\n        "The purpose is to show that we are all interesting people in different ways and that each of us is different.",\n        "The evidence is that after telling Radha not to climb, \\"one afternoon she climbed up too, and both of us sat there talking and eating raw mangoes.\\""\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 04:58:21,327 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:58:21,360 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 04:58:21,360 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 04:58:21,360 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 04:58:21,375 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 04:58:21,393 DEBUG python_multipart.multipart: Calling on_part_data with data[443:148364]
+2025-07-27 04:58:21,393 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 04:58:21,393 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 04:58:25,725 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 04:58:45,684 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is outside Radha\'s house?",\n        "Who climbed the tree with Radha one afternoon?",\n        "What did Radha and her mother eat in the tree?",\n        "Fill in the blank: When I am high up in the tree, I feel like I can rule the whole ______."\n      ],\n      "answers": [\n        "Radha\'s favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "Her mother climbed the tree with her one afternoon.",\n        "They ate raw mangoes in the tree.",\n        "world"\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it simple for Radha to climb the mango tree?",\n        "What was Radha\'s mother\'s opinion about girls climbing trees?",\n        "Describe what Radha and her mother did together in the tree.",\n        "Where exactly in the tree does Radha like to sit comfortably?",\n        "How does Radha feel when she is high up in the tree?"\n      ],\n      "answers": [\n        "It is simple to climb because its branches spread out.",\n        "Her mother told her that it is not sensible for girls to climb trees.",\n        "They sat together in the tree, talking and eating raw mangoes.",\n        "Radha likes to sit comfortably in the fork of two branches.",\n        "She feels like she can rule the whole world."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "How do Radha\'s mother\'s actions one afternoon contradict what she usually tells Radha?",\n        "The introduction says we are all good at different things. What is Radha good at according to the story?",\n        "What does Radha\'s feeling of being able to \\"rule the whole world\\" suggest about her personality?",\n        "Why do you think the author included the detail about Radha and her mother eating raw mangoes?",\n        "How does Radha\'s story serve as an example of the main idea presented in the \'Before you read\' section?"\n      ],\n      "answers": [\n        "She usually tells Radha it\'s not sensible for girls to climb trees, but one afternoon she climbed up the tree herself.",\n        "Radha is good at climbing trees, as she finds it simple to go up the mango tree and sit comfortably in its branches.",\n        "It suggests she is adventurous, confident, and feels powerful and free when she is doing what she loves.",\n        "It shows that they were sharing a happy and special moment together, connecting over an activity and a snack from the tree itself.",\n        "The introduction talks about how everyone is different and enjoys different things. Radha\'s story is an example of a girl who enjoys an unconventional activity (climbing trees) and finds joy and a sense of power in it."\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 05:00:21,345 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 05:00:21,347 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 05:00:21,350 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 05:00:21,351 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:00:21,351 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:00:21,360 DEBUG python_multipart.multipart: Calling on_part_data with data[443:114688]
+2025-07-27 05:00:21,360 DEBUG python_multipart.multipart: Calling on_part_data with data[0:16384]
+2025-07-27 05:00:21,394 DEBUG python_multipart.multipart: Calling on_part_data with data[0:16384]
+2025-07-27 05:00:21,477 DEBUG python_multipart.multipart: Calling on_part_data with data[0:908]
+2025-07-27 05:00:21,524 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:00:21,524 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 05:00:23,244 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 05:00:45,594 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is outside Radha\'s house?",\n        "Who tells Radha it is not sensible for girls to climb trees?",\n        "True or False: Radha\'s mother climbed the tree with her one afternoon.",\n        "What did Radha and her mother eat in the tree?"\n      ],\n      "answers": [\n        "Her favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "Her mother tells her it is not sensible for girls to climb trees.",\n        "True, one afternoon her mother climbed up too.",\n        "They ate raw mangoes."\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it simple for Radha to climb the tree?",\n        "Where does Radha sit comfortably in the tree?",\n        "How does Radha feel when she is high up in the tree?",\n        "What did Radha and her mother do together in the tree one afternoon?",\n        "What was Radha\'s mother\'s opinion about girls climbing trees?"\n      ],\n      "answers": [\n        "It is simple to climb because its branches spread out.",\n        "She can sit comfortably in the fork of two branches.",\n        "She feels like she can rule the whole world.",\n        "They sat there talking and eating raw mangoes.",\n        "Her mother told her that it is not sensible for girls to climb trees."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "Radha\'s mother says climbing trees isn\'t sensible for girls, but then she climbs it herself. What might this action show about her character?",\n        "The introduction says, \\"we are all good at different things.\\" Based on the text, what is Radha good at?",\n        "Why do you think Radha feels like she can \\"rule the whole world\\" when she is high up in the tree?",\n        "How does the experience of climbing the tree together seem to change the relationship between Radha and her mother in that moment?",\n        "The lesson introduction asks the reader to think about \\"what you enjoy doing.\\" How does Radha\'s story serve as an example for this idea?"\n      ],\n      "answers": [\n        "It might show that she loves her daughter and wants to share her daughter\'s joy, even if she has her own reservations.",\n        "Radha is good at climbing trees, an activity that brings her joy.",\n        "Being high above everything on the ground gives her a feeling of power and a unique perspective, making her feel in charge.",\n        "It brings them closer. They share an activity and spend time talking, moving from a point of disagreement to a moment of connection.",\n        "Radha\'s story shows a specific, personal activity that she enjoys, encouraging the reader to think about their own unique interests."\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 05:02:42,927 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:02:42,927 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 05:02:42,927 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 05:02:42,927 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:02:42,927 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:02:42,927 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 05:02:42,928 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_part_data with data[443:148364]
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:02:42,929 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 05:02:44,877 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 05:03:01,757 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is outside Radha\'s house?",\n        "Who tells Radha it is not sensible for girls to climb trees?",\n        "What did Radha and her mother eat in the tree?",\n        "Where does Radha like to sit in the tree?"\n      ],\n      "answers": [\n        "Her favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "Her mother tells her it is not sensible for girls to climb trees.",\n        "They ate raw mangoes.",\n        "She likes to sit in the fork of two branches."\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it easy for Radha to climb the mango tree?",\n        "What did Radha\'s mother do one afternoon that was surprising?",\n        "How does Radha feel when she is high up in the tree?",\n        "What two things did Radha and her mother do together in the tree?",\n        "According to the text, what is the main idea of this lesson?"\n      ],\n      "answers": [\n        "It is easy to climb because its branches spread out.",\n        "One afternoon, her mother climbed up the tree too.",\n        "She feels like she can rule the whole world.",\n        "They sat talking and eating raw mangoes.",\n        "The lesson is about how we are all interesting people in different ways and good at different things."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "Do you think Radha\'s mother changed her mind about girls climbing trees? Why?",\n        "The introduction says we are all good at different things. What does Radha\'s story show she is good at?",\n        "What does Radha mean when she says she feels like she can \\"rule the whole world\\"?",\n        "Why might Radha\'s mother have thought it was \\"not sensible\\" for girls to climb trees?",\n        "How does Radha\'s love for climbing trees support the idea in the introduction that \\"we are all interesting people in different ways\\"?"\n      ],\n      "answers": [\n        "Yes, it seems she changed her mind because she climbed the tree herself and shared a happy moment there with Radha.",\n        "Radha\'s story shows she is good at climbing trees, as she finds it simple to go up and can sit comfortably in it.",\n        "It means she feels powerful, free, and on top of everything, with a unique perspective from high up.",\n        "She might have thought it was not safe, not traditionally done by girls, or not proper behaviour.",\n        "It shows her unique personality and a specific interest that makes her an individual, which is different from what some people, like her mother initially, might expect."\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 05:18:53,201 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:18:53,570 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 05:18:53,585 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 05:18:53,744 DEBUG python_multipart.multipart: Calling on_part_data with data[443:148364]
+2025-07-27 05:18:53,744 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 05:18:53,744 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 05:19:05,851 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 05:19:32,668 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is just outside Radha\'s house?",\n        "Fill in the blank: When I am high up in the tree, I feel like I can rule the whole ______.",\n        "What did Radha and her mother eat together in the tree?",\n        "True or False: Radha\'s mother never climbed the tree."\n      ],\n      "answers": [\n        "Her favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "world",\n        "They ate raw mangoes.",\n        "False. One afternoon she climbed up too."\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it simple for Radha to climb the mango tree?",\n        "What is her mother\'s opinion about girls climbing trees?",\n        "Where does Radha like to sit comfortably in the tree?",\n        "Describe what Radha and her mother did together one afternoon.",\n        "According to the \'Before you read\' section, what is the main topic of this lesson?"\n      ],\n      "answers": [\n        "It is simple to climb because its branches spread out.",\n        "Her mother tells her it is not sensible for girls to climb trees.",\n        "She can sit comfortably in the fork of two branches.",\n        "One afternoon, they both sat in the mango tree talking and eating raw mangoes.",\n        "The lesson is about what we are like, how we are different, and the different things we are good at."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "Radha\'s mother says it\'s \'not sensible\' for girls to climb trees, but then climbs the tree herself. What does this action suggest about her?",\n        "How does Radha\'s story connect to the idea in the introduction that \'we are all interesting people in different ways\'?",\n        "What does Radha mean when she says she feels like she can \'rule the whole world\'?",\n        "The section is titled \'Who I Am\'. How does Radha\'s description of climbing the tree help define who she is?",\n        "The introduction asks the reader to think about what they enjoy doing. How does Radha\'s story serve as an example for the reader?"\n      ],\n      "answers": [\n        "It suggests that despite her words, she understands her daughter\'s joy and perhaps shares a similar adventurous spirit, valuing the shared experience over her own stated belief.",\n        "Radha\'s story shows her unique interest in climbing trees, which is different from what her mother thinks is \'sensible\' for girls, illustrating the theme that everyone has their own distinct qualities and interests.",\n        "This feeling likely means she feels powerful, free, and confident. Being high above everything gives her a sense of control and a unique perspective on the world below.",\n        "Her love for climbing trees, the feeling of power it gives her, and her special moments with her mother in the tree are all parts of her identity and what makes her unique.",\n        "Radha\'s story shows a person who clearly knows what she enjoys and finds happiness in it. This serves as an example to encourage the reader to reflect on their own personal interests and joys."\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 06:04:30,026 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 06:04:30,057 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_data with data[443:16384]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_data with data[0:131980]
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:04:30,089 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 06:04:35,903 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 06:05:04,488 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is outside Radha\'s house?",\n        "True or False: Radha\'s mother always thought it was a good idea for girls to climb trees.",\n        "What did Radha and her mother eat together in the tree?",\n        "Fill in the blank: When Radha is high up in the tree, she feels like she can rule the whole ____."\n      ],\n      "answers": [\n        "Radha\'s favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "False, her mother initially told her it is not sensible for girls to climb trees.",\n        "They ate raw mangoes.",\n        "world"\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it simple for Radha to climb the mango tree?",\n        "Where exactly in the tree does Radha like to sit?",\n        "Describe the a specific event when Radha\'s mother\'s actions were different from her words.",\n        "How does being high up in the tree make Radha feel?",\n        "According to the \'Before you read\' section, what two things should you think about while reading?"\n      ],\n      "answers": [\n        "It is simple to climb because its branches spread out.",\n        "Radha likes to sit comfortably in the fork of two branches.",\n        "One afternoon, her mother climbed up the tree with her, even though she had said it wasn\'t sensible for girls to do so.",\n        "She feels like she can rule the whole world.",\n        "You should think about what you are like and what you enjoy doing."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "What does the fact that Radha\'s mother climbed the tree with her suggest about their relationship?",\n        "The introduction states, \\"we are all good at different things.\\" How does Radha\'s story support this statement?",\n        "What does Radha mean when she says she feels like she can \\"rule the whole world\\"?",\n        "Why might Radha\'s mother have initially told her it\'s \\"not sensible for girls to climb trees\\"?",\n        "The section is titled \\"MANY VOICES\\". Based on Radha\'s story, what do you predict other stories in this section will be about?"\n      ],\n      "answers": [\n        "It suggests they have a close relationship and that her mother is willing to understand and share in the things that make Radha happy, even if she has reservations.",\n        "Radha\'s story shows that she is good at and enjoys climbing trees, an activity that her mother initially questions, highlighting that people have different skills and interests.",\n        "It\'s a way of expressing a feeling of freedom, power, and having a unique perspective on everything below her. She feels confident and in control.",\n        "She might have been expressing a common belief from her time about how girls should behave, or she might simply have been concerned for Radha\'s safety.",\n        "The stories will likely be about different children describing their own unique personalities, favourite activities, and what makes them special."\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 06:05:46,852 DEBUG app.agents.diagram_generator: Enriched prompt: As a Grade 5 teacher, draw a line-art diagram of: water cycle diagram
+2025-07-27 06:13:47,064 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:13:47,064 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 06:13:47,064 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 06:13:47,064 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:13:47,065 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:13:47,065 DEBUG python_multipart.multipart: Calling on_part_data with data[90:91]
+2025-07-27 06:13:47,065 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:13:47,065 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:13:47,065 DEBUG python_multipart.multipart: Calling on_header_field with data[135:154]
+2025-07-27 06:13:47,065 DEBUG python_multipart.multipart: Calling on_header_value with data[156:181]
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_part_data with data[185:192]
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_header_field with data[236:255]
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_header_value with data[257:288]
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:13:47,066 DEBUG python_multipart.multipart: Calling on_part_data with data[292:293]
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_header_field with data[337:356]
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_header_value with data[358:413]
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_header_field with data[415:427]
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_header_value with data[429:439]
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:13:47,067 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:13:47,068 DEBUG python_multipart.multipart: Calling on_part_data with data[443:148364]
+2025-07-27 06:13:47,068 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:13:47,068 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 06:13:52,155 DEBUG app.agents.worksheet_builder: 🧠 Worksheet prompt: 
+Inputs available:
+  pages     : ["Before you read\nIn this lesson we look at what we are like and\nhow each of us is different. We are all interesting\npeople in different ways and we are all good at\ndifferent things. As you read this, think about\nwhat you are like and what you enjoy doing.\nRADHA\nWho I Am\nPart I\nMANY VOICES\nMy favourite activblished\nclimbing\ntrees. Just outside our house,\nthere is a mango tree which I\nlove to go up. Its branches\nspread out, so it is simple to\nclimb up the tree, and I can sit\ncomfortably in the fork of two\nbranches. My mother tells me\nit is not sensible for girls\nto climb trees, but one\nafternoon she climbed up too,\nand both of us sat there\ntalking and eating raw\nmangoes. When I am high up\nin the tree, I feel like I can\nrule the whole world.\n2020-21\n6\n0647CH06"]
+  grade     : 5
+  subject   : "English"
+  num_questions: 5
+
+TASK:
+  • From 'pages', create three worksheets: remedial, core, enrichment.
+  • For each worksheet:
+      – Generate exactly 5 questions.
+      – Provide their answers.
+  • Return a single JSON object, no extra text, exactly matching this shape:
+
+{
+  "worksheets": [
+    {
+      "level": "remedial",
+      "questions": [ "...", "...", ... ],
+      "answers":   [ "...", "...", ... ]
+    },
+    {
+      "level": "core",
+      "questions": [ … ],
+      "answers":   [ … ]
+    },
+    {
+      "level": "enrichment",
+      "questions": [ … ],
+      "answers":   [ … ]
+    }
+  ]
+}
+
+RULES:
+  • Use ONLY the content in 'pages'—do NOT invent unrelated facts.
+  • Output *only* the JSON object—no markdown, no code fences.
+
+2025-07-27 06:14:13,305 DEBUG app.agents.worksheet_builder: 🪵 Raw Gemini response:
+'```json\n{\n  "worksheets": [\n    {\n      "level": "remedial",\n      "questions": [\n        "What is the girl\'s name in the story?",\n        "What is Radha\'s favourite activity?",\n        "What kind of tree is outside her house?",\n        "Who climbed the tree with Radha one afternoon?",\n        "What did Radha and her mother eat in the tree?"\n      ],\n      "answers": [\n        "The girl\'s name is Radha.",\n        "Radha\'s favourite activity is climbing trees.",\n        "There is a mango tree outside her house.",\n        "Her mother climbed the tree with her one afternoon.",\n        "They ate raw mangoes."\n      ]\n    },\n    {\n      "level": "core",\n      "questions": [\n        "Why is it simple for Radha to climb the mango tree?",\n        "According to Radha\'s mother, why is it not sensible for girls to climb trees?",\n        "Where does Radha sit comfortably when she is in the tree?",\n        "Describe what happened one afternoon with Radha and her mother.",\n        "How does Radha feel when she is high up in the tree?"\n      ],\n      "answers": [\n        "It is simple to climb because its branches spread out.",\n        "The text does not state why, only that her mother tells her \'it is not sensible for girls to climb trees\'.",\n        "She sits comfortably in the fork of two branches.",\n        "One afternoon, her mother climbed up the tree too, and they sat together talking and eating raw mangoes.",\n        "She feels like she can rule the whole world."\n      ]\n    },\n    {\n      "level": "enrichment",\n      "questions": [\n        "The introduction says, \'we are all good at different things.\' What special skill does Radha have according to the text?",\n        "Radha\'s mother\'s words say one thing, but her actions say another. Explain this contradiction.",\n        "Why do you think Radha feels like she can \'rule the whole world\' from the tree?",\n        "The section is titled \'Who I Am\'. How does her love for climbing trees define a part of who Radha is?",\n        "What does the shared experience of eating raw mangoes in the tree tell us about the relationship between Radha and her mother?"\n      ],\n      "answers": [\n        "According to the text, Radha has the special skill of being good at climbing trees.",\n        "Her mother says it\'s not sensible for girls to climb trees, but she contradicts this by climbing the tree herself, showing she might not truly believe it or is willing to share the experience.",\n        "Being high above everything gives her a perspective of power and control, making her feel important and on top of her world.",\n        "It shows that she is adventurous, enjoys nature, and finds joy and a sense of power in simple activities, which are all parts of her identity.",\n        "It suggests they have a close relationship and that her mother is supportive and willing to understand and share in the things that make Radha happy."\n      ]\n    }\n  ]\n}\n```'
+2025-07-27 06:30:32,877 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_part_data with data[90:111]
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_header_field with data[155:174]
+2025-07-27 06:30:32,894 DEBUG python_multipart.multipart: Calling on_header_value with data[176:198]
+2025-07-27 06:30:32,909 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,909 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,909 DEBUG python_multipart.multipart: Calling on_part_data with data[202:211]
+2025-07-27 06:30:32,910 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[255:274]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[276:301]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[305:2836]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[2880:2899]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[2901:2963]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[2965:2977]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[2979:2994]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[2998:6619]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[6663:6682]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[6684:6746]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[6748:6760]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[6762:6777]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[6781:10379]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[10423:10442]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[10444:10502]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[10504:10516]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[10518:10533]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[10537:14251]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[14295:14314]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[14316:14374]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[14376:14388]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[14390:14405]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[14409:18178]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[18222:18241]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[18243:18307]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[18309:18321]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[18323:18338]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[18342:22281]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[22325:22344]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[22346:22410]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_field with data[22412:22424]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_value with data[22426:22441]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_data with data[22445:26554]
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:32,926 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[90:111]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[155:174]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[176:198]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[202:211]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[255:274]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[276:301]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[305:2836]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[2880:2899]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[2901:2963]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[2965:2977]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[2979:2994]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[2998:6619]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[6663:6682]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[6684:6746]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[6748:6760]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[6762:6777]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[6781:10379]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[10423:10442]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[10444:10502]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[10504:10516]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[10518:10533]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[10537:14251]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[14295:14314]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[14316:14374]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[14376:14388]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[14390:14405]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[14409:18178]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[18222:18241]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[18243:18307]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[18309:18321]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[18323:18338]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[18342:22281]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[22325:22344]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[22346:22410]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_field with data[22412:22424]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_value with data[22426:22441]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_data with data[22445:26554]
+2025-07-27 06:30:33,051 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[90:111]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[155:174]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[176:198]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[202:211]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[255:274]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[276:301]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[305:2836]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[2880:2899]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[2901:2963]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[2965:2977]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[2979:2994]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[2998:6619]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[6663:6682]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[6684:6746]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[6748:6760]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[6762:6777]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[6781:10379]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[10423:10442]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[10444:10502]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[10504:10516]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[10518:10533]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[10537:14251]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[14295:14314]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[14316:14374]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[14376:14388]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[14390:14405]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[14409:18178]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[18222:18241]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[18243:18307]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[18309:18321]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[18323:18338]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[18342:22281]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[22325:22344]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[22346:22410]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_field with data[22412:22424]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_value with data[22426:22441]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_data with data[22445:26554]
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:30:33,066 DEBUG python_multipart.multipart: Calling on_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[42:61]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[63:86]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[90:111]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[155:174]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[176:198]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[202:211]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[255:274]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[276:301]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[305:2836]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[2880:2899]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[2901:2963]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[2965:2977]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[2979:2994]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[2998:6619]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[6663:6682]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[6684:6746]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[6748:6760]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[6762:6777]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[6781:10379]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[10423:10442]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[10444:10502]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[10504:10516]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[10518:10533]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[10537:14251]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[14295:14314]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[14316:14374]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[14376:14388]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[14390:14405]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[14409:18178]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[18222:18241]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[18243:18307]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[18309:18321]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[18323:18338]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[18342:22281]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_begin with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[22325:22344]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[22346:22410]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_field with data[22412:22424]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_value with data[22426:22441]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_header_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_headers_finished with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_data with data[22445:26554]
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_part_end with no data
+2025-07-27 06:31:09,941 DEBUG python_multipart.multipart: Calling on_end with no data

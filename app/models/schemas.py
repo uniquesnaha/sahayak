@@ -43,3 +43,22 @@ class DiagramRequest(BaseModel):
         1, ge=1, le=5,
         description="Number of variants to generate (1–5)"
     )
+
+
+class FileLink(BaseModel):
+    filename: str
+    url: str
+
+class ResourceListItem(BaseModel):
+    id: str
+    title: str
+    type: str
+    files: List[FileLink]
+
+class ResourceOut(BaseModel):
+    id: str
+    title: str
+    type: str
+
+class ResourceDetail(ResourceListItem):
+    payload: str 

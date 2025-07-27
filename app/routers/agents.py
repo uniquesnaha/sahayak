@@ -1,16 +1,19 @@
 # app/routers/agents.py
-
+import io
 import os, uuid, json, re, tempfile, logging
 from json import JSONDecodeError
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import JSONResponse
 from fastapi.responses import FileResponse
 from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.genai import types as genai_types
+from fastapi import APIRouter, Depends, File, UploadFile, Form
 from google.cloud import firestore
 from pydantic import BaseModel
 from typing import Optional
-
+from fastapi.responses import StreamingResponse
+from google.cloud import vision
 from app.agents.intent_parser import intent_agent
 from app.agents.ask_sahayak import (
     ask_explanation_seq, ask_story_seq, ask_quiz_seq,
@@ -18,7 +21,11 @@ from app.agents.ask_sahayak import (
 )
 from app.agents.diagram_generator import run_diagram_pipeline
 from app.agents.mindmap_generator import run_mindmap_pipeline
+from app.agents.worksheet_builder import run_worksheet_pipeline
 from app.deps import get_current_user
+from typing import List
+from app.deps import get_db, get_bucket
+from google.cloud import storage as gcs
 
 router = APIRouter()
 db = firestore.Client()
@@ -155,3 +162,144 @@ async def generate_mindmap(req: MindmapRequest, user=Depends(get_current_user)):
         subject=req.subject
     )
     return { "code": result["code"] }  # stays JSON with valid PlantUML inside
+#-------------------------------------------------------------------------------
+# inline Vision OCR
+_vision = vision.ImageAnnotatorClient()
+def ocr_image_to_text(b: bytes) -> str:
+    img = vision.Image(content=b)
+    res = _vision.text_detection(image=img)
+    if res.error.message:
+        raise RuntimeError(res.error.message)
+    return (res.full_text_annotation.text or "").strip()
+
+@router.post("/worksheets/json")
+async def worksheets_json(
+    grade: int = Form(...),
+    subject: str = Form(...),
+    num_questions: int = Form(5),
+    files: List[UploadFile] = File(...),
+    user = Depends(get_current_user)
+):
+    # 1) OCR
+    pages = []
+    for f in files:
+        b = await f.read()
+        pages.append(ocr_image_to_text(b))
+
+    # 2) Gemini → JSON
+    result = run_worksheet_pipeline(
+        pages=pages,
+        grade=grade,
+        subject=subject,
+        num_questions=num_questions
+    )
+    # result is already a dict: { "worksheets": [ {level,questions,answers}, … ] }
+    return JSONResponse(result)
+
+    #----------------------------------------------------------------------
+    
+@router.post("/resources")
+async def publish_resource(
+    title: str = Form(...),
+    type: str = Form(...),                  # "worksheet" or "diagram"
+    payload: str = Form(...),               # JSON string describing the resource
+    files: List[UploadFile] = File(...),    # PDFs or images
+    db: firestore.Client = Depends(get_db),
+    bucket: gcs.Bucket = Depends(get_bucket),
+    user=Depends(get_current_user),
+):
+    """
+    1) Generate a new resource ID
+    2) Upload each file to Cloud Storage under `<resource_id>/<filename>`
+    3) Write a Firestore document with metadata + payload + file list
+    """
+    # 1) New ID and timestamp
+    resource_id = str(uuid.uuid4())
+    now = firestore.SERVER_TIMESTAMP
+
+    # 2) Upload files & collect metadata
+    file_entries = []
+    for f in files:
+        path = f"{resource_id}/{f.filename}"
+        blob = bucket.blob(path)
+        content = await f.read()
+        blob.upload_from_string(content)
+        file_entries.append({"filename": f.filename, "path": path})
+
+    # 3) Persist to Firestore
+    doc_ref = db.collection("resources").document(resource_id)
+    doc_ref.set({
+        "title": title,
+        "type": type,
+        "payload": payload,
+        "files": file_entries,
+        "created_by": user["uid"],
+        "created_at": now,
+    })
+
+    return {"id": resource_id, "title": title, "type": type}
+
+
+@router.get("/resources")
+async def list_resources(
+    db: firestore.Client = Depends(get_db),
+    bucket: gcs.Bucket = Depends(get_bucket),
+):
+    """
+    Lists all resources. Returns:
+    [
+      {
+        id: "...",
+        title: "...",
+        type: "...",
+        files: [ { filename, url }, ... ]
+      },
+      ...
+    ]
+    """
+    docs = db.collection("resources").stream()
+    out = []
+
+    for doc in docs:
+        data = doc.to_dict()
+        signed = []
+        for f in data.get("files", []):
+            url = bucket.blob(f["path"]).generate_signed_url(expiration=3600)
+            signed.append({"filename": f["filename"], "url": url})
+
+        out.append({
+            "id": doc.id,
+            "title": data.get("title"),
+            "type": data.get("type"),
+            "files": signed,
+        })
+
+    return JSONResponse(out)
+
+
+@router.get("/resources/{resource_id}")
+async def get_resource(
+    resource_id: str,
+    db: firestore.Client = Depends(get_db),
+    bucket: gcs.Bucket = Depends(get_bucket),
+):
+    """
+    Fetches a single resource by ID, including its payload and signed file URLs.
+    """
+    doc = db.collection("resources").document(resource_id).get()
+    if not doc.exists:
+        raise HTTPException(status_code=404, detail="Resource not found")
+
+    data = doc.to_dict()
+    signed = []
+    for f in data.get("files", []):
+        url = bucket.blob(f["path"]).generate_signed_url(expiration=3600)
+        signed.append({"filename": f["filename"], "url": url})
+
+    return JSONResponse({
+        "id": resource_id,
+        "title": data.get("title"),
+        "type": data.get("type"),
+        "payload": data.get("payload"),
+        "files": signed,
+    })

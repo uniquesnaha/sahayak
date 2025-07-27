@@ -9,11 +9,12 @@ import LessonPlanner from './pages/LessonPlanner';
 import AutoEval from './pages/AutoEval';
 import ResourceBazaar from './pages/ResourceBazaar';
 import MindMap from './pages/MindMap';
+import Home from './pages/Home';
 
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<AskSahayak />} />
+      <Route path="/" element={<Home />} />
       <Route path="/ask-sahayak" element={<AskSahayak />} />
       <Route path="/worksheet-builder" element={<WorksheetBuilder />} />
       <Route path="/diagram-generator" element={<DiagramGenerator />} />

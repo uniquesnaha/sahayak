@@ -1,313 +1,244 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Send, X, Bot, Mic, MicOff } from 'lucide-react'
+import { Send, X, Bot } from 'lucide-react'
 import Layout from '../components/Layout'
 import MicButton from '../components/MicButton'
+import ReactMarkdown from 'react-markdown'
+
+const suggestedPrompts = [
+  {
+  icon: "📚",
+  title: "Hindi Story",
+  prompt: "Generate a moral story about friendship for grade 3-4 children in Hindi",
+  response: `**🌟 मित्रता की ताक़त – राम और श्याम की कहानी**
+
+एक बार की बात है, एक गाँव में राम और श्याम नाम के दो अच्छे दोस्त रहते थे। दोनों साथ में स्कूल जाते, साथ खेलते और एक-दूसरे की मदद करते। राम बहुत होशियार था और श्याम थोड़ा धीमा सीखता था, लेकिन राम हमेशा श्याम को समझाने में मदद करता।
+
+एक दिन गाँव में मेला लगा। दोनों दोस्तों ने मेला घूमने का फैसला किया। मेले में अचानक श्याम भीड़ में खो गया। वह डर गया और रोने लगा। राम ने तुरंत अपने दोस्त को ढूंढना शुरू किया। उसने हर जगह ढूंढा और अंत में श्याम को रोते हुए देखा।
+
+राम ने उसका हाथ पकड़ा और कहा, *"डर मत, मैं हमेशा तुम्हारे साथ हूँ।"* श्याम मुस्कराया और बोला, *"तुम सबसे अच्छे दोस्त हो!"*
+
+**✨ शिक्षा:**  
+**सच्चा मित्र वही होता है जो मुश्किल समय में भी साथ न छोड़े।**
+
+**🎯 गतिविधि:**  
+बच्चों से कहें कि वे अपने सबसे अच्छे दोस्त के बारे में एक लाइन लिखें और बताएँ कि वे उसकी मदद कैसे करते हैं।`
+}
+,
+  {
+  icon: "🌍",
+  title: "English Story",
+  prompt: "Create a simple English story with moral for grade 1-2",
+  response: `**🌟 The Lost Puppy**
+
+One sunny day, a boy named Arjun was walking home from school. On the way, he saw a small puppy near a tree. The puppy looked scared and was all alone.
+
+Arjun gently said, *"Don’t be afraid. Are you lost?"* He gave the puppy water and tied a red ribbon to its neck. Then he walked around the neighborhood asking, *"Is this your puppy?"*
+
+After some time, an old man said, *"Yes! That’s my dog, Bruno! Thank you, little boy!"* The old man was very happy and gave Arjun a big smile.
+
+**✨ Moral:**  
+**Be kind to animals and help those in need.**
+
+**📝 Vocabulary:**  
+- Puppy = baby dog  
+- Lost = not found  
+- Kind = nice and helpful
+
+**🎯 Activity:**  
+Ask kids to draw the lost puppy and Arjun helping it.`
+}
+,
+  {
+  icon: "🔢",
+  title: "Math Activity",
+  prompt: "Create a fun math activity for grade 2-3 students using local examples",
+  response: `**🧮 சந்தையில் கணிதம் - வகுப்பு 2 மற்றும் 3 மாணவர்களுக்கான பயிற்சி**
+
+**வகுப்பு 2 (கூட்டல் மற்றும் கழித்தல்):**
+
+- அம்மா மார்க்கெட்டில்:
+  - 3 மாங்காய்கள் வாங்கினாள் 🥭🥭🥭
+  - 4 வாழைப்பழங்கள் வாங்கினாள் 🍌🍌🍌🍌
+  - **கேள்வி 1:** மொத்தம் எத்தனை பழங்கள்? (3 + 4 = 7)
+
+- ரோட்டில் 2 மாங்காய்கள் விழுந்துவிட்டன:
+  - **கேள்வி 2:** இப்போது எத்தனை மாங்காய்கள் இருக்கின்றன? (3 - 2 = 1)
+
+**வகுப்பு 3 (பெருக்கல்):**
+
+- கடைக்காரரிடம்:
+  - 6 கட்டிகள் இருக்கின்றன 🧺
+  - ஒவ்வொரு கட்டியிலும் 5 செம்பருத்தி பூக்கள் 🌺
+  - **கேள்வி:** மொத்தம் எத்தனை பூக்கள்? (6 × 5 = 30)
+
+**💰 உள்ளூர் விலை எடுத்துக்காட்டு:**
+- ஒரு இடியாப்பம் = ₹10  
+- 3 இடியாப்பம் = 10 × 3 = ₹30
+
+**🎭 செயல்பாடு:**  
+மாணவர்களை விற்பனையாளர் மற்றும் வாடிக்கையாளர் ஆக பங்கு வைக்கவும். அவர்கள் வாங்கும் பொருட்களின் விலையை கூட்டச் சொல்லுங்கள்.`
+}
+
+]
 
 export default function AskSahayak() {
   const [question, setQuestion] = useState('')
   const [msgs, setMsgs] = useState([
-    { sender: 'bot', text: 'Hello! I\'m Sahayak, your AI assistant. How can I help you today?' },
+    { sender: 'bot', text: 'Hello! I\'m Sahayak, your AI assistant. How can I help you today?' }
   ])
   const [loading, setLoading] = useState(false)
-  const [isTyping, setIsTyping] = useState(false)
-  const [showSuggestions, setShowSuggestions] = useState(true)
   const bottomRef = useRef(null)
   const inputRef = useRef(null)
 
-  // session persistence
-  const [sessionId] = useState(() => {
-    let sid = localStorage.getItem('sahayak_sid')
-    if (!sid) {
-      sid = crypto.randomUUID()
-      localStorage.setItem('sahayak_sid', sid)
-    }
-    return sid
-  })
-
-  // Suggested prompts
-  const suggestedPrompts = [
-    {
-      icon: "💡",
-      title: "Creative Ideas",
-      prompt: "Give me some creative project ideas for web development"
-    },
-    {
-      icon: "🚀",
-      title: "Productivity Tips",
-      prompt: "How can I improve my daily productivity as a developer?"
-    },
-    {
-      icon: "🎨",
-      title: "UI/UX Design",
-      prompt: "What are the latest trends in UI/UX design for 2024?"
-    },
-    {
-      icon: "⚡",
-      title: "Code Optimization",
-      prompt: "How can I optimize my React application for better performance?"
-    },
-    {
-      icon: "🔧",
-      title: "Best Practices",
-      prompt: "What are the JavaScript best practices I should follow?"
-    },
-    {
-      icon: "📱",
-      title: "Mobile Development",
-      prompt: "Guide me through creating responsive mobile-first designs"
-    }
-  ]
-
-  // scroll on new msg
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (bottomRef.current) bottomRef.current.scrollIntoView({ behavior: 'smooth' })
   }, [msgs])
 
-  // interim & final voice text -> input
-  const handleVoice = text => {
-    setQuestion(text)
-    inputRef.current?.focus()
-  }
+  const callAgent = async (customPrompt = null, usePresetResponse = false) => {
+    const prompt = customPrompt || question.trim()
+    if (!prompt) return
 
-  const callAgent = async (customPrompt = null) => {
-    const promptToSend = customPrompt || question.trim()
-    if (!promptToSend) return
-
-    setLoading(true)
-    setIsTyping(true)
-    setShowSuggestions(false)
-    setMsgs(m => [...m, { sender: 'user', text: promptToSend }])
+    setMsgs(m => [...m, { sender: 'user', text: prompt }])
     setQuestion('')
+    setLoading(true)
+
+    if (usePresetResponse) {
+      const matched = suggestedPrompts.find(p => p.prompt === prompt)
+      if (matched?.response) {
+        setTimeout(() => {
+          setMsgs(m => [...m, { sender: 'bot', text: matched.response, markdown: true }])
+          setLoading(false)
+        }, 800)
+        return
+      }
+    }
 
     try {
       const res = await fetch('/api/agents/ask-sahayak', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ session_id: sessionId, prompt: promptToSend })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt })
       })
-      if (!res.ok) throw new Error(await res.text())
       const data = await res.json()
-      setMsgs(m => [...m, { sender: 'bot', text: data.response }])
-    } catch (err) {
-      console.error(err)
-      setMsgs(m => [...m, { sender: 'bot', text: '⚠️ Something went wrong.' }])
+      setMsgs(m => [...m, { sender: 'bot', text: data.response, markdown: true }])
+    } catch {
+      setMsgs(m => [...m, { sender: 'bot', text: "⚠️ Something went wrong. Please try again." }])
+    } finally {
+      setLoading(false)
     }
-
-    setLoading(false)
-    setIsTyping(false)
   }
 
   const handleSuggestionClick = (prompt) => {
     setQuestion(prompt)
-    callAgent(prompt)
+    callAgent(prompt, true)
   }
 
-  const onKeyDown = e => {
-    if (e.key === 'Enter' && !e.shiftKey && !loading) {
-      e.preventDefault()
-      callAgent()
+  const handleVoice = (text, isFinal = false) => {
+    if (text && text.trim()) {
+      setQuestion(text)
+      if (inputRef.current) inputRef.current.focus()
+      if (isFinal && text.trim().length > 3) {
+        setTimeout(() => { callAgent(text.trim()) }, 500)
+      }
     }
   }
 
-  // Suggested Prompts Component
-  const SuggestedPrompts = () => (
-    <div className="space-y-4 animate-fade-in">
-      <div className="text-center">
-        <h3 className="text-lg font-semibold text-white mb-2">✨ Try asking me about:</h3>
-        <p className="text-gray-400 text-sm">Click on any suggestion to get started</p>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
-        {suggestedPrompts.map((suggestion, index) => (
-          <button
-            key={index}
-            onClick={() => handleSuggestionClick(suggestion.prompt)}
-            className="group p-4 bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:bg-gray-700/40 hover:border-purple-500/50 transition-all duration-300 text-left transform hover:scale-105 hover:shadow-lg"
-          >
-            <div className="flex items-start space-x-3">
-              <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
-                {suggestion.icon}
-              </span>
-              <div className="flex-1">
-                <h4 className="font-medium text-white group-hover:text-purple-300 transition-colors duration-300">
-                  {suggestion.title}
-                </h4>
-                <p className="text-sm text-gray-400 mt-1 group-hover:text-gray-300 transition-colors duration-300">
-                  {suggestion.prompt}
-                </p>
-              </div>
-            </div>
-          </button>
-        ))}
-      </div>
-    </div>
-  )
-
-  const TypingIndicator = () => (
-    <div className="flex items-center space-x-2 p-4 bg-gray-800/50 backdrop-blur-sm rounded-2xl rounded-bl-lg max-w-xs">
-      <div className="flex space-x-1">
-        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
-        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-100"></div>
-        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-200"></div>
-      </div>
-      <span className="text-sm text-gray-400">Sahayak is typing...</span>
-    </div>
-  )
-
   return (
     <Layout>
-      <div className="flex flex-col h-screen bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden">
+      <div className="flex flex-col h-screen bg-[#1e1e1e] text-white">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-700/50 bg-gray-800/30 backdrop-blur-sm">
+        <div className="p-4 border-b border-gray-700 bg-gray-900">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <Bot className="w-4 h-4 text-white" />
-            </div>
-            <div>
-              <h2 className="text-xl font-semibold text-white">Ask Sahayak</h2>
-              <p className="text-sm text-gray-400">Always ready to help</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm text-gray-400">Online</span>
+            <Bot className="text-white w-5 h-5" />
+            <h2 className="text-lg font-semibold">Ask Sahayak</h2>
           </div>
         </div>
 
-        {/* Chat Messages */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6">
-          {msgs.length === 1 && showSuggestions && (
-            <div className="flex justify-center items-center min-h-[60%]">
-              <SuggestedPrompts />
-            </div>
-          )}
-          
-          {msgs.map((m, i) => (
-            <div key={i} className={`flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}>
-              {m.sender === 'user' ? (
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-2xl rounded-br-lg max-w-[75%] shadow-lg">
-                  <p className="leading-relaxed">{m.text}</p>
-                </div>
-              ) : (
-                <div className="flex items-end space-x-3 max-w-[75%]">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Bot className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="bg-gray-800/50 backdrop-blur-sm text-white p-4 rounded-2xl rounded-bl-lg shadow-lg border border-gray-700/30">
-                    <p className="leading-relaxed">{m.text}</p>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-          
-          {loading && isTyping && (
-            <div className="flex justify-start animate-fade-in">
-              <div className="flex items-end space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                  <Bot className="w-4 h-4 text-white" />
-                </div>
-                <TypingIndicator />
-              </div>
-            </div>
-          )}
-          <div ref={bottomRef} />
-        </div>
-
-        {/* Input Section */}
-        <div className="p-6 border-t border-gray-700/50 bg-gray-800/30 backdrop-blur-sm">
-          {/* Quick suggestions when input is focused but empty */}
-          {question === '' && !loading && msgs.length > 1 && (
-            <div className="mb-4">
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-gray-400 mb-2 block w-full">💫 Quick suggestions:</span>
-                {suggestedPrompts.slice(0, 3).map((suggestion, index) => (
+        {/* Chat Window */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {msgs.length === 1 && (
+            <div className="space-y-3">
+              <h3 className="text-gray-300 text-sm mb-1">✨ Try asking me:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {suggestedPrompts.map((s, i) => (
                   <button
-                    key={index}
-                    onClick={() => handleSuggestionClick(suggestion.prompt)}
-                    className="px-3 py-1.5 bg-gray-700/50 hover:bg-purple-600/30 text-xs text-gray-300 hover:text-white rounded-full border border-gray-600/50 hover:border-purple-500/50 transition-all duration-200 hover:scale-105"
+                    key={i}
+                    onClick={() => handleSuggestionClick(s.prompt)}
+                    className="text-left p-4 bg-gray-800 border border-gray-700 rounded-xl hover:bg-gray-700 transition"
                   >
-                    {suggestion.icon} {suggestion.title}
+                    <div className="flex items-start space-x-3">
+                      <span className="text-xl">{s.icon}</span>
+                      <div>
+                        <p className="font-semibold text-white">{s.title}</p>
+                        <p className="text-sm text-gray-400">{s.prompt}</p>
+                      </div>
+                    </div>
                   </button>
                 ))}
               </div>
             </div>
           )}
-          
-          <div className="flex items-end space-x-3">
-            <MicButton lang="en-US" onResult={handleVoice} />
-            
+          {msgs.map((m, i) => (
+            <div key={i} className={`flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`p-3 max-w-[75%] rounded-xl shadow-sm ${m.sender === 'user' ? 'bg-gray-700' : 'bg-gray-800'}`}>
+                {m.markdown ? (
+                  <div className="prose prose-invert prose-sm max-w-none">
+                    <ReactMarkdown>{m.text}</ReactMarkdown>
+                  </div>
+                ) : (
+                  <p className="whitespace-pre-wrap">{m.text}</p>
+                )}
+              </div>
+            </div>
+          ))}
+          {loading && (
+            <div className="text-sm text-gray-400">Sahayak is typing...</div>
+          )}
+          <div ref={bottomRef} />
+        </div>
+
+        {/* Input Section */}
+        <div className="p-4 border-t border-gray-700 bg-gray-900">
+          <div className="flex items-end space-x-2">
+            <MicButton lang="en-US" onResult={handleVoice} disabled={loading} />
             <div className="flex-1 relative">
               <textarea
                 ref={inputRef}
-                className="w-full bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl px-4 py-3 pr-12 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300 max-h-32"
-                placeholder="Ask me anything..."
+                className="w-full resize-none bg-gray-800 text-white rounded-xl px-4 py-3 focus:outline-none"
+                rows={1}
+                placeholder="Ask a question..."
                 value={question}
                 onChange={e => setQuestion(e.target.value)}
-                onKeyDown={onKeyDown}
-                disabled={loading}
-                rows={1}
-                style={{ minHeight: '48px' }}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault()
+                    callAgent()
+                  }
+                }}
               />
               {question && (
-                <button
-                  onClick={() => setQuestion('')}
-                  className="absolute right-3 top-3 p-1 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 transition-all duration-200"
-                >
+                <button onClick={() => setQuestion('')} className="absolute right-3 top-3 text-gray-400 hover:text-white">
                   <X className="w-4 h-4" />
                 </button>
               )}
             </div>
-
             <button
               onClick={() => callAgent()}
               disabled={loading || !question.trim()}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 disabled:from-gray-600 disabled:to-gray-600 text-white p-3 rounded-2xl transition-all duration-300 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none"
+              className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full"
             >
-              <Send className="w-5 h-5" />
+              <Send className="w-4 h-4" />
             </button>
-          </div>
-          
-          <div className="flex items-center justify-center mt-3 space-x-2 text-xs text-gray-500">
-            <div className="w-1 h-1 bg-gray-500 rounded-full"></div>
-            <span>Press Enter to send • Shift+Enter for new line</span>
-            <div className="w-1 h-1 bg-gray-500 rounded-full"></div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        @keyframes fade-in {
-          from { 
-            opacity: 0; 
-            transform: translateY(10px); 
-          }
-          to { 
-            opacity: 1; 
-            transform: translateY(0); 
-          }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
-        
-        textarea {
-          scrollbar-width: thin;
-          scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
-        }
-        
-        textarea::-webkit-scrollbar {
-          width: 4px;
-        }
-        
-        textarea::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        
-        textarea::-webkit-scrollbar-thumb {
-          background-color: rgba(156, 163, 175, 0.3);
-          border-radius: 2px;
+        .prose code {
+          background: #2d2d2d;
+          padding: 0.2em 0.4em;
+          border-radius: 4px;
+          color: #FFDD57;
         }
       `}</style>
     </Layout>
