@@ -2,6 +2,8 @@
 
 # 1. Load .env into os.environ before anything else
 from dotenv import load_dotenv
+import uvicorn
+# Ensure you have python-dotenv installed: pip install python-dotenv
 load_dotenv()
 
 import os
@@ -50,3 +52,7 @@ app.include_router(agents_router, prefix="/api")
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+if __name__== "__main__":
+    port=int(os.environ.get("PORT", 8080))
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port,)
